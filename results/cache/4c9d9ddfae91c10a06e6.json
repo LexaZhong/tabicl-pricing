@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 500,
+    "model": "xgb_tweedie",
+    "seed": 0,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N500/xgb_tweedie/s0"
+  },
+  "metrics": {
+    "tweedie_deviance_1.5": 137.30285157011676,
+    "tweedie_deviance_1.9": 43.273857562918494,
+    "gini": 0.4973240693062515,
+    "normalized_gini": 0.4993823807221905,
+    "gini_exposure_weighted": 0.35610619389309583,
+    "normalized_gini_exposure_weighted": 0.36006450849879545,
+    "calibration_ratio": 0.18557139788536986,
+    "mean_predicted_loss_cost": 40.07665358692574,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 2.745583388427097,
+    "balanced_tweedie_deviance_1.5": 101.70062569845011
+  },
+  "info": {
+    "n_train": 500,
+    "n_claims_stage2": 22,
+    "claim_rate": 0.044,
+    "tuned": true
+  }
+}

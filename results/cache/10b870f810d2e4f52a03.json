@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 542410,
+    "model": "xgb_tweedie",
+    "seed": 1,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N542410/xgb_tweedie/s1"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3698762604338578,
+    "normalized_gini_fixed_exposure": 0.38094584761200273,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 87.63115300095303,
+    "tweedie_deviance_1.9": 34.41669277868826,
+    "gini": 0.5864412702226585,
+    "normalized_gini": 0.5888684175010134,
+    "gini_exposure_weighted": 0.5201583126098925,
+    "normalized_gini_exposure_weighted": 0.5259401560077018,
+    "gini_total_loss": 0.46921822970218385,
+    "normalized_gini_total_loss": 0.4740948362440881,
+    "calibration_ratio": 0.5714094838249127,
+    "mean_predicted_loss_cost": 123.40360745507152,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 1.252230163427893,
+    "balanced_tweedie_deviance_1.5": 86.09298179918295
+  },
+  "info": {
+    "n_train": 542410,
+    "n_claims_stage2": 19907,
+    "claim_rate": 0.03670101952397633,
+    "tuned": true,
+    "mean_exposure": 0.5289258444731774,
+    "total_loss": 44475288.42,
+    "max_loss": 1404185.52
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.2037"
+    }
+  ]
+}

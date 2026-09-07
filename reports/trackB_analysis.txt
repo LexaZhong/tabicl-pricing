@@ -1,0 +1,103 @@
+﻿Track B configs: 168  ok=168
+
+=== trivial 1/exposure floor (zero risk information) ===
+  gini_exposure_weighted                 0.4676
+  gini_total_loss                        0.0032
+  tweedie_deviance_1.5                  91.9884
+
+==============================================================================
+exposure-weighted Gini (rate)
+==============================================================================
+--- mean over seeds ---
+cfg_model  intercept  glm_tweedie  glm_hurdle  xgb_tweedie  xgb_hurdle  tabicl
+cfg_n                                                                         
+500          -0.0000       0.0805      0.1734       0.2492      0.4676  0.2644
+1000         -0.0000       0.0849      0.1882       0.3644      0.4676  0.3855
+2000         -0.0000       0.3329      0.4293       0.3996      0.4676  0.4610
+5000         -0.0000      -0.0087      0.3341       0.3921      0.4676  0.4872
+10000        -0.0000       0.2030      0.4168       0.4042      0.5036  0.5191
+20000        -0.0000       0.3946      0.5248       0.4476      0.5267  0.5469
+50000        -0.0000       0.4360      0.5172       0.4800      0.5641  0.5686
+100000       -0.0000       0.3349      0.4871       0.4859      0.5653  0.5690
+200000       -0.0000       0.4182      0.5118       0.5004      0.5808  0.5790
+542410       -0.0000       0.4503      0.5240       0.5185      0.6035  0.5594
+
+--- seed SD (the instability number) ---
+cfg_model  intercept  glm_tweedie  glm_hurdle  xgb_tweedie  xgb_hurdle  tabicl
+cfg_n                                                                         
+500              NaN          NaN         NaN       0.1546      0.0000  0.0917
+1000             NaN          NaN         NaN       0.0597      0.0000  0.0670
+2000             NaN          NaN         NaN       0.0322      0.0000  0.0514
+5000             NaN          NaN         NaN       0.0481      0.0000  0.0452
+10000            NaN          NaN         NaN       0.0518      0.0514  0.0280
+20000            NaN          NaN         NaN       0.0319      0.0153  0.0081
+50000            NaN          NaN         NaN       0.0212      0.0146  0.0356
+100000           NaN          NaN         NaN       0.0165      0.0138  0.0224
+200000           NaN          NaN         NaN       0.0115      0.0045  0.0207
+542410           NaN          NaN         NaN       0.0015      0.0001  0.0224
+
+--- crossover ---
+  vs xgb_hurdle  : tabicl leads up to N=100,000; xgb_hurdle takes over from N=200,000
+  vs xgb_tweedie : tabicl leads at every N tested
+  vs glm_hurdle  : tabicl leads at every N tested
+  wrote C:\Users\jzng0\tabicl-pricing\reports\trackB_gini_exposure_weighted.png
+
+[skip] gini_total_loss: not present in cached results
+
+==============================================================================
+mean Tweedie deviance (p=1.5)
+==============================================================================
+--- mean over seeds ---
+cfg_model  intercept  glm_tweedie  glm_hurdle  xgb_tweedie  xgb_hurdle   tabicl
+cfg_n                                                                          
+500         104.9731     168.0600    165.9538     159.7386     99.6757 143.9372
+1000        102.9256     135.7845    120.0003     137.2642     99.9139 115.6275
+2000        112.9906     112.0346    101.6450     117.4182     97.5951  98.2958
+5000        103.8394     112.6186    100.1930     115.1335     97.5199  99.2485
+10000       105.3724     104.9548     98.2891     105.6254     95.5293  96.0967
+20000       105.6360      99.1327     92.8320     101.7469     94.9710  95.9508
+50000       102.2328      94.5429     91.7689      95.5692     88.7415  88.2525
+100000      104.7995     100.2567     95.1310      91.1006     88.4334  88.0770
+200000      104.0114      96.1823     93.0389      88.7608     86.2678  86.8575
+542410      102.8017      92.0452     91.6479      88.0900     82.6753  87.2776
+
+--- seed SD (the instability number) ---
+cfg_model  intercept  glm_tweedie  glm_hurdle  xgb_tweedie  xgb_hurdle  tabicl
+cfg_n                                                                         
+500              NaN          NaN         NaN      24.9237      4.3946 17.1555
+1000             NaN          NaN         NaN      31.3714      6.5231 15.0445
+2000             NaN          NaN         NaN      15.6195      3.7763  4.2958
+5000             NaN          NaN         NaN       5.9875      2.8884  3.9854
+10000            NaN          NaN         NaN       5.2566      3.1954  4.1286
+20000            NaN          NaN         NaN       2.6783      1.6114  1.5651
+50000            NaN          NaN         NaN       2.4410      1.6080  2.6048
+100000           NaN          NaN         NaN       4.4782      2.2148  4.0883
+200000           NaN          NaN         NaN       3.5292      0.7384  1.8490
+542410           NaN          NaN         NaN       0.3986      0.1643  1.5276
+
+--- crossover ---
+  vs xgb_hurdle  : tabicl leads up to N=100,000; xgb_hurdle takes over from N=200,000
+  vs xgb_tweedie : tabicl leads at every N tested
+  vs glm_hurdle  : no clean crossover (tabicl leads at [500, 1000, 2000, 5000, 10000, 50000, 100000, 200000, 542410], glm_hurdle at [20000])
+  wrote C:\Users\jzng0\tabicl-pricing\reports\trackB_tweedie_deviance_1.5.png
+
+=== lift charts ===
+  SKIPPED: no saved predictions in the cache.
+  Track B ran before prediction-persistence was added, so lift charts
+  cannot be drawn from it without re-running. Non-TabICL models re-run in
+  minutes (1-4s each); TabICL is ~265s per config.
+
+=== stage-2 claim counts by N (the real thin-data stress) ===
+cfg_n
+500          20
+1000         42
+2000         78
+5000        185
+10000       361
+20000       751
+50000     1,839
+100000    3,702
+200000    7,403
+542410   19,907
+
+wrote C:\Users\jzng0\tabicl-pricing\results\trackB_results.parquet

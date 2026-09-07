@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 10000,
+    "model": "tabicl",
+    "seed": 12,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N10000/tabicl/s12"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3815381781161895,
+    "normalized_gini_fixed_exposure": 0.39295678097405795,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 101.34907517299092,
+    "tweedie_deviance_1.9": 35.920991919274464,
+    "gini": 0.5721001980112518,
+    "normalized_gini": 0.5744679908475611,
+    "gini_exposure_weighted": 0.5246700277879022,
+    "normalized_gini_exposure_weighted": 0.5305020213611146,
+    "gini_total_loss": 0.1942798066057193,
+    "normalized_gini_total_loss": 0.19629896552981882,
+    "calibration_ratio": 0.39268588758586737,
+    "mean_predicted_loss_cost": 84.80582926348688,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 10000,
+    "n_claims_stage2": 372,
+    "claim_rate": 0.0372,
+    "stage1_context_size": 10000,
+    "stage2_context_size": 372,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 13899.289499999884,
+    "peak_vram_mib": 4234.33349609375,
+    "fit_seconds": 0.8920454999897629,
+    "predict_seconds": 97.92531280001276,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.15105893406165574,
+    "stage1_brier": 0.03491531017639775,
+    "stage1_mean_pred": 0.027543039551782205,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.688067475352672,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.004326527437760834,
+    "exposure_p_last_decile": 0.04899010950351457,
+    "mean_exposure": 0.5285018181001572,
+    "total_loss": 638493.71,
+    "max_loss": 32288.28
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.3288"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.393"
+    }
+  ]
+}

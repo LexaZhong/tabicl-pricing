@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "xgb_hurdle",
+    "seed": 6,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/xgb_hurdle/s6"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.02189440652679908,
+    "normalized_gini_fixed_exposure": 0.022549658208747693,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 99.87928061363247,
+    "tweedie_deviance_1.9": 35.857539834465506,
+    "gini": 0.47877842378378,
+    "normalized_gini": 0.48075997898329836,
+    "gini_exposure_weighted": 0.4676069945192445,
+    "normalized_gini_exposure_weighted": 0.47280470134904606,
+    "gini_total_loss": -5.995204332975845e-15,
+    "normalized_gini_total_loss": -6.057512766066348e-15,
+    "calibration_ratio": 0.47267019691176293,
+    "mean_predicted_loss_cost": 102.07952280554619,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 1.1068896049517545,
+    "balanced_tweedie_deviance_1.5": 97.89031777201919
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 186,
+    "claim_rate": 0.0372,
+    "tuned": true,
+    "mean_exposure": 0.528615985477955,
+    "total_loss": 297741.73,
+    "max_loss": 41614.72
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "FAIL",
+      "message": "premium CV=3.60e-17 -- collapsed to a constant premium (no risk differentiation)"
+    },
+    {
+      "check": "exposure_dependence",
+      "severity": "WARN",
+      "message": "Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone"
+    },
+    {
+      "check": "trivial_floor",
+      "severity": "WARN",
+      "message": "rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)"
+    },
+    {
+      "check": "trivial_floor",
+      "severity": "WARN",
+      "message": "total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.473"
+    }
+  ]
+}

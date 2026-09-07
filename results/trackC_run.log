@@ -1,0 +1,28 @@
+﻿context N   = 20,000
+finetune N  = 10,000  (disjoint from context)
+fixed cap   = 35,563.77   floor = 22.07  (train-pool q0.995)
+
+Track C: 40 configs (20 fine-tuned)
+
+  [cached] C/srs/icl/s0
+  [run]    C/srs/icl/s1
+  [run]    C/srs/icl/s2
+  [run]    C/srs/icl/s3
+  [run]    C/srs/icl/s4
+  [run]    C/srs/icl/s5
+  [run]    C/srs/icl/s6
+  [run]    C/srs/icl/s7
+  [run]    C/srs/icl/s8
+  [run]    C/srs/icl/s9
+  [run]    C/srs/icl/s10
+  [run]    C/srs/icl/s11
+  [run]    C/srs/icl/s12
+  [run]    C/srs/icl/s13
+  [run]    C/srs/icl/s14
+  [run]    C/srs/icl/s15
+  [run]    C/srs/icl/s16
+  [run]    C/srs/icl/s17
+  [run]    C/srs/icl/s18
+  [run]    C/srs/icl/s19
+  [run]    C/srs/finetune/s0
+  [run]    C/srs/finetune/s1

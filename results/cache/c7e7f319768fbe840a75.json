@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl",
+    "seed": 6,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl/s6"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3540821563153864,
+    "normalized_gini_fixed_exposure": 0.36467906051508053,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 100.14214275131631,
+    "tweedie_deviance_1.9": 35.9419741382143,
+    "gini": 0.577153374087678,
+    "normalized_gini": 0.5795420808725508,
+    "gini_exposure_weighted": 0.5541278853983935,
+    "normalized_gini_exposure_weighted": 0.5602873191285924,
+    "gini_total_loss": 0.38207527356392,
+    "normalized_gini_total_loss": 0.3860461993733121,
+    "calibration_ratio": 0.3487107641608861,
+    "mean_predicted_loss_cost": 75.30880651090771,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 186,
+    "claim_rate": 0.0372,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 186,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 12354.86099999964,
+    "peak_vram_mib": 4193.09765625,
+    "fit_seconds": 0.9758067999937339,
+    "predict_seconds": 78.21043490000011,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.151532306468738,
+    "stage1_brier": 0.03512306163248477,
+    "stage1_mean_pred": 0.02863389069379941,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.685235145832942,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.009946217519744928,
+    "exposure_p_last_decile": 0.046879925616468344,
+    "mean_exposure": 0.528615985477955,
+    "total_loss": 297741.73,
+    "max_loss": 41614.72
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.2643"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.349"
+    }
+  ]
+}

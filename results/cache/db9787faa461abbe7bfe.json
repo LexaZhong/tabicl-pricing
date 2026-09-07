@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 10000,
+    "model": "tabicl",
+    "seed": 14,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N10000/tabicl/s14"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.30080510312677555,
+    "normalized_gini_fixed_exposure": 0.30980754169579033,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 101.14713124500676,
+    "tweedie_deviance_1.9": 36.02129082359983,
+    "gini": 0.577887051208983,
+    "normalized_gini": 0.5802787945168949,
+    "gini_exposure_weighted": 0.5131178591093027,
+    "normalized_gini_exposure_weighted": 0.5188214440257937,
+    "gini_total_loss": 0.2779193086738615,
+    "normalized_gini_total_loss": 0.28080773677193577,
+    "calibration_ratio": 0.3670639483195061,
+    "mean_predicted_loss_cost": 79.2724248924237,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 10000,
+    "n_claims_stage2": 346,
+    "claim_rate": 0.0346,
+    "stage1_context_size": 10000,
+    "stage2_context_size": 346,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 11953.926249999999,
+    "peak_vram_mib": 4231.330078125,
+    "fit_seconds": 0.8629458000068553,
+    "predict_seconds": 98.60038849999546,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.15171776910039034,
+    "stage1_brier": 0.035001543572522706,
+    "stage1_mean_pred": 0.02757956139104995,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6856469302079976,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.0066655087090991445,
+    "exposure_p_last_decile": 0.047199244403553706,
+    "mean_exposure": 0.52842289879482,
+    "total_loss": 545877.96,
+    "max_loss": 22600.0
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=0.9526"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.367"
+    }
+  ]
+}

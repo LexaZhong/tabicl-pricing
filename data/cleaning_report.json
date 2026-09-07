@@ -1,0 +1,11 @@
+{
+  "n_freq_rows": 678013,
+  "n_sev_rows": 26639,
+  "n_sev_unique_policies": 24950,
+  "claimnb_sum_before_clip": 36102,
+  "n_exposure_clipped": 1224,
+  "n_claimnb_clipped": 9,
+  "n_claim_no_severity": 9116,
+  "n_severity_no_claim": 0,
+  "n_claims_only_subset": 34060
+}

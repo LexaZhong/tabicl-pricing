@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "glm_hurdle",
+    "seed": 16,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/glm_hurdle/s16"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.2481150723208987,
+    "normalized_gini_fixed_exposure": 0.2555406135547326,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 107.48094452144063,
+    "tweedie_deviance_1.9": 36.99001094819705,
+    "gini": 0.33579434405879505,
+    "normalized_gini": 0.3371841206138452,
+    "gini_exposure_weighted": 0.30035475670742906,
+    "normalized_gini_exposure_weighted": 0.3036933636756731,
+    "gini_total_loss": 0.07688233923277088,
+    "normalized_gini_total_loss": 0.0776813809040576,
+    "calibration_ratio": 0.4800318021069779,
+    "mean_predicted_loss_cost": 103.66936102746111,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 1.3130708376710782,
+    "balanced_tweedie_deviance_1.5": 102.09864091247039
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 201,
+    "claim_rate": 0.0402,
+    "mean_exposure": 0.5301977677969908,
+    "total_loss": 358934.44999999995,
+    "max_loss": 96422.32
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.0988"
+    },
+    {
+      "check": "trivial_floor",
+      "severity": "WARN",
+      "message": "rate Gini 0.3004 does not beat the 1/exposure floor (0.4676)"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.480"
+    }
+  ]
+}

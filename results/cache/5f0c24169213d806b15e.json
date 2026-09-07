@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "A",
+    "region": "R11",
+    "model": "one_over_exposure",
+    "seed": 0,
+    "context": 20000,
+    "trials": 30,
+    "cap": "fixed",
+    "label": "A/R11/one_over_exposure/s0"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.01417902335961263,
+    "normalized_gini_fixed_exposure": 0.01470750459675369,
+    "n_fixed_exposure": 9267.0,
+    "tweedie_deviance_1.5": 79.3216958194548,
+    "tweedie_deviance_1.9": 34.15605884133822,
+    "gini": 0.6677688497448038,
+    "normalized_gini": 0.6702322584360164,
+    "gini_exposure_weighted": 0.2339950216730733,
+    "normalized_gini_exposure_weighted": 0.23849671495271185,
+    "gini_total_loss": -2.6645352591003757e-15,
+    "normalized_gini_total_loss": -2.7069742009483334e-15,
+    "calibration_ratio": 1.3917201287294976,
+    "mean_predicted_loss_cost": 210.30200556749026,
+    "mean_actual_loss_cost": 151.10940858452273,
+    "balance_factor": 1.0,
+    "balanced_tweedie_deviance_1.5": 79.3216958194548,
+    "balanced_calibration_ratio": 1.3917201287294976
+  },
+  "info": {
+    "n_train": 608222,
+    "n_test": 69791,
+    "region_te_levels": 1
+  }
+}

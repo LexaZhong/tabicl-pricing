@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 20000,
+    "model": "tabicl",
+    "seed": 0,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N20000/tabicl/s0"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.37307641697546234,
+    "normalized_gini_fixed_exposure": 0.3842417778368911,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 97.58177464739072,
+    "tweedie_deviance_1.9": 35.40315805416823,
+    "gini": 0.5935373990680513,
+    "normalized_gini": 0.5959939156126711,
+    "gini_exposure_weighted": 0.5441718615351123,
+    "normalized_gini_exposure_weighted": 0.5502206286289298,
+    "gini_total_loss": 0.3079056512040472,
+    "normalized_gini_total_loss": 0.3111057287327996,
+    "calibration_ratio": 0.39407507600304775,
+    "mean_predicted_loss_cost": 85.10584329364846,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 20000,
+    "n_claims_stage2": 767,
+    "claim_rate": 0.03835,
+    "stage1_context_size": 20000,
+    "stage2_context_size": 767,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 27232.71359999986,
+    "peak_vram_mib": 5148.3271484375,
+    "fit_seconds": 1.2837851000076625,
+    "predict_seconds": 1270.7806750000163,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.14934317972966762,
+    "stage1_brier": 0.03483396333978798,
+    "stage1_mean_pred": 0.02929626443655998,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.7012740616729525,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.0052637176027771175,
+    "exposure_p_last_decile": 0.045354499089372134,
+    "mean_exposure": 0.5290496079047833,
+    "total_loss": 1320022.4,
+    "max_loss": 92149.0
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=0.9544"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.394"
+    }
+  ]
+}

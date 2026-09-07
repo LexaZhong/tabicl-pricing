@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl",
+    "seed": 2,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl/s2"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3360419554549048,
+    "normalized_gini_fixed_exposure": 0.34609895591516426,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 100.27561145838219,
+    "tweedie_deviance_1.9": 36.544491854624255,
+    "gini": 0.5603137311107356,
+    "normalized_gini": 0.5626327424364118,
+    "gini_exposure_weighted": 0.49605271626868563,
+    "normalized_gini_exposure_weighted": 0.5015666128132449,
+    "gini_total_loss": 0.3328695244254507,
+    "normalized_gini_total_loss": 0.33632905263142854,
+    "calibration_ratio": 0.45325711414077363,
+    "mean_predicted_loss_cost": 97.88700498150175,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 178,
+    "claim_rate": 0.0356,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 178,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 22886.105000000134,
+    "peak_vram_mib": 4192.3505859375,
+    "fit_seconds": 0.674779099994339,
+    "predict_seconds": 77.47031019999122,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.15453564009069565,
+    "stage1_brier": 0.03514799601631168,
+    "stage1_mean_pred": 0.026974822106088762,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6766962443392298,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.007135643340230276,
+    "exposure_p_last_decile": 0.043929709562507385,
+    "mean_exposure": 0.5303044099109214,
+    "total_loss": 374411.93,
+    "max_loss": 35831.0
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.2105"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.453"
+    }
+  ]
+}

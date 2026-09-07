@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 100000,
+    "model": "glm_hurdle",
+    "seed": 4,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N100000/glm_hurdle/s4"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.26018129260123835,
+    "normalized_gini_fixed_exposure": 0.2679679494069321,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 91.92553558891757,
+    "tweedie_deviance_1.9": 34.72178435908204,
+    "gini": 0.6034516738785433,
+    "normalized_gini": 0.6059492233557773,
+    "gini_exposure_weighted": 0.5145497777795686,
+    "normalized_gini_exposure_weighted": 0.5202692792532098,
+    "gini_total_loss": 0.2876369876194199,
+    "normalized_gini_total_loss": 0.29062641199964656,
+    "calibration_ratio": 0.5692489423638922,
+    "mean_predicted_loss_cost": 122.9370093010446,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 1.4615178575694803,
+    "balanced_tweedie_deviance_1.5": 89.40366726857546
+  },
+  "info": {
+    "n_train": 100000,
+    "n_claims_stage2": 3592,
+    "claim_rate": 0.03592,
+    "mean_exposure": 0.5287730179429597,
+    "total_loss": 9467879.77,
+    "max_loss": 1404185.52
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=0.8283"
+    }
+  ]
+}

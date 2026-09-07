@@ -1,0 +1,302 @@
+﻿Track B configs (full test set): 560  ok=560
+
+=== trivial 1/exposure floor (zero risk information) ===
+  exposure-weighted Gini (rate)                        0.4676
+  Gini on total loss (artifact-free)                  -0.0000
+  Gini on full-term policies (exposure >= 0.95)        0.0219
+  mean Tweedie deviance (p=1.5)                       91.9884
+
+==============================================================================
+exposure-weighted Gini (rate)
+==============================================================================
+--- mean over draws (competitors | references) ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+500        0.2644      0.4676       0.2492      0.1734       0.0805                NaN    -0.0000
+1000       0.3855      0.4676       0.3644      0.1882       0.0849                NaN    -0.0000
+2000       0.4610      0.4676       0.3996      0.4293       0.3329                NaN    -0.0000
+5000       0.4897      0.4679       0.3850      0.4176       0.3040             0.4676    -0.0000
+10000      0.5298      0.5013       0.4329      0.4559       0.3511             0.4676    -0.0000
+20000      0.5513      0.5253       0.4553      0.4704       0.3509             0.4676    -0.0000
+50000      0.5686      0.5641       0.4800      0.5172       0.4360                NaN    -0.0000
+100000     0.5690      0.5653       0.4859      0.5101       0.3941             0.4676    -0.0000
+200000     0.5790      0.5808       0.5004      0.5118       0.4182                NaN    -0.0000
+542410     0.5594      0.6035       0.5185      0.5240       0.4503             0.4676    -0.0000
+
+--- SD across draws ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+500        0.0917      0.0000       0.1546         NaN          NaN                NaN        NaN
+1000       0.0670      0.0000       0.0597         NaN          NaN                NaN        NaN
+2000       0.0514      0.0000       0.0322         NaN          NaN                NaN        NaN
+5000       0.0746      0.0013       0.0520      0.0958       0.1361             0.0000     0.0000
+10000      0.0369      0.0433       0.0450      0.0501       0.0879             0.0000     0.0000
+20000      0.0136      0.0269       0.0288      0.0607       0.1011             0.0000     0.0000
+50000      0.0356      0.0146       0.0212         NaN          NaN                NaN        NaN
+100000     0.0224      0.0138       0.0165      0.0146       0.0556             0.0000     0.0000
+200000     0.0207      0.0045       0.0115         NaN          NaN                NaN        NaN
+542410     0.0224      0.0001       0.0015      0.0000       0.0000             0.0000     0.0000
+
+--- draws per cell ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+500             5           5            5           1            1                NaN          1
+1000            5           5            5           1            1                NaN          1
+2000            5           5            5           1            1                NaN          1
+5000           20          20           20          20           20                 20         20
+10000          20          20           20          20           20                 20         20
+20000          20          20           20          20           20                 20         20
+50000           5           5            5           1            1                NaN          1
+100000          5           5            5           5            5                  5          5
+200000          3           3            3           1            1                NaN          1
+542410          3           3            3           3            3                  3          3
+
+--- tabicl vs xgb_hurdle: two-sample z per N ---
+     N  tabicl  xgb_hurdle   delta     SE       z             verdict
+   500  0.2644      0.4676 -0.2032 0.0410 -4.9524              B wins
+  1000  0.3855      0.4676 -0.0821 0.0300 -2.7367              B wins
+  2000  0.4610      0.4676 -0.0066 0.0230 -0.2861 not distinguishable
+  5000  0.4897      0.4679  0.0218 0.0167  1.3078 not distinguishable
+ 10000  0.5298      0.5013  0.0285 0.0127  2.2375              A wins
+ 20000  0.5513      0.5253  0.0260 0.0067  3.8562              A wins
+ 50000  0.5686      0.5641  0.0045 0.0172  0.2610 not distinguishable
+100000  0.5690      0.5653  0.0037 0.0118  0.3160 not distinguishable
+200000  0.5790      0.5808 -0.0018 0.0122 -0.1515 not distinguishable
+542410  0.5594      0.6035 -0.0441 0.0129 -3.4084              B wins
+
+--- tabicl vs xgb_tweedie: two-sample z per N ---
+     N  tabicl  xgb_tweedie  delta     SE       z             verdict
+   500  0.2644       0.2492 0.0153 0.0804  0.1899 not distinguishable
+  1000  0.3855       0.3644 0.0212 0.0402  0.5278 not distinguishable
+  2000  0.4610       0.3996 0.0615 0.0271  2.2668              A wins
+  5000  0.4897       0.3850 0.1047 0.0203  5.1502              A wins
+ 10000  0.5298       0.4329 0.0969 0.0130  7.4531              A wins
+ 20000  0.5513       0.4553 0.0960 0.0071 13.4828              A wins
+ 50000  0.5686       0.4800 0.0886 0.0185  4.7791              A wins
+100000  0.5690       0.4859 0.0831 0.0124  6.6797              A wins
+200000  0.5790       0.5004 0.0786 0.0137  5.7534              A wins
+542410  0.5594       0.5185 0.0409 0.0130  3.1576              A wins
+  wrote trackB_gini_exposure_weighted.png
+
+==============================================================================
+Gini on total loss (artifact-free)
+==============================================================================
+--- mean over draws (competitors | references) ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000       0.3314      0.0032       0.2217      0.2262       0.1742            -0.0000    -0.0114
+10000      0.3324      0.1884       0.2949      0.2453       0.2038            -0.0000    -0.0114
+20000      0.4115      0.2365       0.2385      0.2362       0.2016            -0.0000    -0.0114
+100000     0.4904      0.4470       0.3519      0.2581       0.2184            -0.0000    -0.0114
+542410     0.4507      0.5426       0.4630      0.2928       0.2844            -0.0000    -0.0114
+
+--- SD across draws ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000       0.1149      0.0141       0.0845      0.1359       0.1137             0.0000     0.0000
+10000      0.1105      0.1175       0.1031      0.0981       0.1021             0.0000     0.0000
+20000      0.0704      0.1164       0.0748      0.1139       0.1146             0.0000     0.0000
+100000     0.0395      0.0557       0.0978      0.0471       0.1140             0.0000     0.0000
+542410     0.0451      0.0010       0.0054      0.0000       0.0000             0.0000     0.0000
+
+--- draws per cell ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000           20          20           20          20           20                 20         20
+10000          20          20           20          20           20                 20         20
+20000          20          20           20          20           20                 20         20
+100000          5           5            5           5            5                  5          5
+542410          3           3            3           3            3                  3          3
+
+--- tabicl vs xgb_hurdle: two-sample z per N ---
+     N  tabicl  xgb_hurdle   delta     SE       z             verdict
+  5000  0.3314      0.0032  0.3283 0.0259 12.6849              A wins
+ 10000  0.3324      0.1884  0.1440 0.0361  3.9926              A wins
+ 20000  0.4115      0.2365  0.1750 0.0304  5.7512              A wins
+100000  0.4904      0.4470  0.0433 0.0305  1.4185 not distinguishable
+542410  0.4507      0.5426 -0.0919 0.0261 -3.5266              B wins
+
+--- tabicl vs xgb_tweedie: two-sample z per N ---
+     N  tabicl  xgb_tweedie   delta     SE       z             verdict
+  5000  0.3314       0.2217  0.1097 0.0319  3.4408              A wins
+ 10000  0.3324       0.2949  0.0375 0.0338  1.1087 not distinguishable
+ 20000  0.4115       0.2385  0.1730 0.0230  7.5350              A wins
+100000  0.4904       0.3519  0.1385 0.0472  2.9360              A wins
+542410  0.4507       0.4630 -0.0123 0.0262 -0.4683 not distinguishable
+  wrote trackB_gini_total_loss.png
+
+==============================================================================
+Gini on full-term policies (exposure >= 0.95)
+==============================================================================
+--- mean over draws (competitors | references) ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000       0.3131      0.0248       0.2337      0.1971       0.2023             0.0219     0.0000
+10000      0.3401      0.2452       0.2800      0.2125       0.2030             0.0219     0.0000
+20000      0.3619      0.2971       0.3143      0.2338       0.2206             0.0219     0.0000
+100000     0.3932      0.3434       0.3287      0.2734       0.2345             0.0219     0.0000
+542410     0.3749      0.3942       0.3701      0.2823       0.2507             0.0219     0.0000
+
+--- SD across draws ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000       0.0347      0.0132       0.0440      0.0508       0.0394             0.0000     0.0000
+10000      0.0295      0.0547       0.0409      0.0481       0.0501             0.0000     0.0000
+20000      0.0188      0.0401       0.0295      0.0489       0.0503             0.0000     0.0000
+100000     0.0132      0.0069       0.0130      0.0087       0.0301             0.0000     0.0000
+542410     0.0301      0.0002       0.0009      0.0000       0.0000             0.0000     0.0000
+
+--- draws per cell ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+5000           20          20           20          20           20                 20         20
+10000          20          20           20          20           20                 20         20
+20000          20          20           20          20           20                 20         20
+100000          5           5            5           5            5                  5          5
+542410          3           3            3           3            3                  3          3
+
+--- tabicl vs xgb_hurdle: two-sample z per N ---
+     N  tabicl  xgb_hurdle   delta     SE       z             verdict
+  5000  0.3131      0.0248  0.2882 0.0083 34.7090              A wins
+ 10000  0.3401      0.2452  0.0949 0.0139  6.8219              A wins
+ 20000  0.3619      0.2971  0.0649 0.0099  6.5457              A wins
+100000  0.3932      0.3434  0.0498 0.0067  7.4723              A wins
+542410  0.3749      0.3942 -0.0193 0.0174 -1.1115 not distinguishable
+
+--- tabicl vs xgb_tweedie: two-sample z per N ---
+     N  tabicl  xgb_tweedie  delta     SE      z             verdict
+  5000  0.3131       0.2337 0.0794 0.0125 6.3366              A wins
+ 10000  0.3401       0.2800 0.0600 0.0113 5.3222              A wins
+ 20000  0.3619       0.3143 0.0477 0.0078 6.0972              A wins
+100000  0.3932       0.3287 0.0646 0.0083 7.7851              A wins
+542410  0.3749       0.3701 0.0047 0.0174 0.2717 not distinguishable
+  wrote trackB_gini_fixed_exposure.png
+
+==============================================================================
+mean Tweedie deviance (p=1.5)
+==============================================================================
+--- mean over draws (competitors | references) ---
+cfg_model   tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                             
+500       143.9372     99.6757     159.7386    165.9538     168.0600                NaN   104.9731
+1000      115.6275     99.9139     137.2642    120.0003     135.7845                NaN   102.9256
+2000       98.2958     97.5951     117.4182    101.6450     112.0346                NaN   112.9906
+5000       98.6424     97.2616     113.0453     98.1528     104.2422            95.5249   104.9482
+10000      95.5651     95.8544     102.8119     95.7000     100.3489            95.6081   105.0417
+20000      93.2561     94.0530     100.7567     94.5512      99.0429            94.6069   103.9619
+50000      88.2525     88.7415      95.5692     91.7689      94.5429                NaN   102.2328
+100000     88.0770     88.4334      91.1006     92.8250      95.8658            94.0025   103.3078
+200000     86.8575     86.2678      88.7608     93.0389      96.1823                NaN   104.0114
+542410     87.2776     82.6753      88.0900     91.6479      92.0452            93.5320   102.8017
+
+--- SD across draws ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+500       17.1555      4.3946      24.9237         NaN          NaN                NaN        NaN
+1000      15.0445      6.5231      31.3714         NaN          NaN                NaN        NaN
+2000       4.2958      3.7763      15.6195         NaN          NaN                NaN        NaN
+5000       6.2139      2.5113       5.6204      5.5527       7.4257             2.2571     2.4159
+10000      3.9920      2.5383       4.8491      2.5972       3.9297             2.4594     2.6377
+20000      3.0817      2.5456       3.6905      3.2963       4.7030             2.2657     2.4143
+50000      2.6048      1.6080       2.4410         NaN          NaN                NaN        NaN
+100000     4.0883      2.2148       4.4782      1.6055       3.9837             1.3317     1.4213
+200000     1.8490      0.7384       3.5292         NaN          NaN                NaN        NaN
+542410     1.5276      0.1643       0.3986      0.0000       0.0000             0.0000     0.0000
+
+--- draws per cell ---
+cfg_model  tabicl  xgb_hurdle  xgb_tweedie  glm_hurdle  glm_tweedie  one_over_exposure  intercept
+cfg_n                                                                                            
+500             5           5            5           1            1                NaN          1
+1000            5           5            5           1            1                NaN          1
+2000            5           5            5           1            1                NaN          1
+5000           20          20           20          20           20                 20         20
+10000          20          20           20          20           20                 20         20
+20000          20          20           20          20           20                 20         20
+50000           5           5            5           1            1                NaN          1
+100000          5           5            5           5            5                  5          5
+200000          3           3            3           1            1                NaN          1
+542410          3           3            3           3            3                  3          3
+
+--- tabicl vs xgb_hurdle: two-sample z per N ---
+     N   tabicl  xgb_hurdle    delta     SE       z             verdict
+   500 143.9372     99.6757 -44.2614 7.9199 -5.5886              B wins
+  1000 115.6275     99.9139 -15.7136 7.3333 -2.1428              B wins
+  2000  98.2958     97.5951  -0.7007 2.5579 -0.2739 not distinguishable
+  5000  98.6424     97.2616  -1.3808 1.4986 -0.9214 not distinguishable
+ 10000  95.5651     95.8544   0.2892 1.0578  0.2734 not distinguishable
+ 20000  93.2561     94.0530   0.7969 0.8938  0.8916 not distinguishable
+ 50000  88.2525     88.7415   0.4889 1.3690  0.3571 not distinguishable
+100000  88.0770     88.4334   0.3564 2.0794  0.1714 not distinguishable
+200000  86.8575     86.2678  -0.5896 1.1495 -0.5130 not distinguishable
+542410  87.2776     82.6753  -4.6023 0.8870 -5.1884              B wins
+
+--- tabicl vs xgb_tweedie: two-sample z per N ---
+     N   tabicl  xgb_tweedie   delta      SE      z             verdict
+   500 143.9372     159.7386 15.8014 13.5315 1.1678 not distinguishable
+  1000 115.6275     137.2642 21.6367 15.5596 1.3906 not distinguishable
+  2000  98.2958     117.4182 19.1225  7.2446 2.6395              A wins
+  5000  98.6424     113.0453 14.4029  1.8735 7.6877              A wins
+ 10000  95.5651     102.8119  7.2468  1.4044 5.1599              A wins
+ 20000  93.2561     100.7567  7.5006  1.0751 6.9766              A wins
+ 50000  88.2525      95.5692  7.3166  1.5965 4.5830              A wins
+100000  88.0770      91.1006  3.0236  2.7118 1.1150 not distinguishable
+200000  86.8575      88.7608  1.9033  2.3003 0.8274 not distinguishable
+542410  87.2776      88.0900  0.8124  0.9115 0.8913 not distinguishable
+  wrote trackB_tweedie_deviance_1.5.png
+
+=== lift charts ===
+  predictions available for N: [5000, 10000, 20000, 100000, 542410]
+  no predictions for N: [500, 1000, 2000, 50000, 200000]
+  wrote trackB_lift_N5000.png
+  wrote trackB_doublelift_N5000.png
+  wrote trackB_lift_N10000.png
+  wrote trackB_doublelift_N10000.png
+  wrote trackB_lift_N20000.png
+  wrote trackB_doublelift_N20000.png
+  wrote trackB_lift_N100000.png
+  wrote trackB_doublelift_N100000.png
+  wrote trackB_lift_N542410.png
+  wrote trackB_doublelift_N542410.png
+
+=== checks: FAIL 25 · WARN 388 ===
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s11: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s8: premium CV=3.37e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s5: premium CV=3.43e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s7: premium CV=3.39e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s19: premium CV=3.53e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s14: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s16: premium CV=2.73e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s1: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s12: premium CV=4.01e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s4: premium CV=3.39e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s18: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s15: premium CV=1.33e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s6: premium CV=3.60e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s2: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s13: premium CV=4.81e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s3: premium CV=4.32e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s17: premium CV=3.89e-17 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s10: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] degeneracy: B/N5000/xgb_hurdle/s0: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+  [FAIL] zero_variance: xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+  [FAIL] trivial_match: xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+  [FAIL] zero_variance: xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+  [FAIL] trivial_match: xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+  [FAIL] zero_variance: xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+  [FAIL] trivial_match: xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+
+*** Blocking failures present — headline results withheld. ***
+wrote C:\Users\jzng0\tabicl-pricing\results\checks_report.md
+
+=== stage-2 claim counts by N ===
+cfg_n
+500          20
+1000         42
+2000         78
+5000        186
+10000       366
+20000       738
+50000     1,839
+100000    3,690
+200000    7,403
+542410   19,907

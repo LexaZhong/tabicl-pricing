@@ -1,0 +1,467 @@
+# Experiment logic checks
+
+**FAIL 25  ·  WARN 388  ·  INFO 40**
+
+**Blocking failures present — headline results are withheld.**
+
+## FAIL (25)
+
+- **degeneracy** — B/N5000/xgb_hurdle/s11: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s8: premium CV=3.37e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s5: premium CV=3.43e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s7: premium CV=3.39e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s19: premium CV=3.53e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s14: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s16: premium CV=2.73e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s1: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s12: premium CV=4.01e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s4: premium CV=3.39e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s18: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s15: premium CV=1.33e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s6: premium CV=3.60e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s2: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s13: premium CV=4.81e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s3: premium CV=4.32e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s17: premium CV=3.89e-17 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s10: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **degeneracy** — B/N5000/xgb_hurdle/s0: premium CV=0.00e+00 -- collapsed to a constant premium (no risk differentiation)
+- **zero_variance** — xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+- **trivial_match** — xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+- **zero_variance** — xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+- **trivial_match** — xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+- **zero_variance** — xgb_hurdle/gini_exposure_weighted is bit-identical across 5 draws (0.467607) -- the model is not responding to the data
+- **trivial_match** — xgb_hurdle/gini_exposure_weighted matches the trivial 1/exposure model to 1e-6 (0.467607) -- it has collapsed to that ordering
+
+## WARN (388)
+
+- **trivial_floor** — B/N5000/glm_tweedie/s1: rate Gini 0.2833 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s19: predicted/actual = 0.433
+- **calibration** — B/N10000/xgb_hurdle/s3: predicted/actual = 0.485
+- **trivial_floor** — B/N10000/xgb_hurdle/s19: rate Gini 0.3697 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_hurdle/s19: total-loss Gini -0.0470 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N5000/xgb_tweedie/s11: rate Gini 0.3582 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s11: predicted/actual = 0.334
+- **trivial_floor** — B/N20000/xgb_tweedie/s13: rate Gini 0.4622 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s13: predicted/actual = 0.404
+- **trivial_floor** — B/N5000/tabicl/s5: rate Gini 0.4662 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s5: predicted/actual = 0.384
+- **calibration** — B/N20000/xgb_hurdle/s18: predicted/actual = 0.497
+- **calibration** — B/N10000/xgb_tweedie/s17: predicted/actual = 0.349
+- **trivial_floor** — B/N5000/glm_hurdle/s16: rate Gini 0.3004 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_hurdle/s16: predicted/actual = 0.480
+- **exposure_dependence** — B/N5000/xgb_hurdle/s11: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s11: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s11: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N5000/xgb_tweedie/s6: rate Gini 0.4145 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s6: predicted/actual = 0.280
+- **trivial_floor** — B/N20000/glm_tweedie/s0: rate Gini 0.3946 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/tabicl/s0: predicted/actual = 0.390
+- **calibration** — B/N20000/tabicl/s2: predicted/actual = 0.435
+- **calibration** — B/N10000/one_over_exposure/s14: predicted/actual = 0.480
+- **exposure_dependence** — B/N5000/xgb_hurdle/s8: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s8: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s8: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s8: predicted/actual = 0.466
+- **trivial_floor** — B/N20000/glm_tweedie/s15: rate Gini 0.2589 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_hurdle/s13: rate Gini 0.4454 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_hurdle/s13: predicted/actual = 0.496
+- **trivial_floor** — B/N10000/glm_tweedie/s11: rate Gini 0.4181 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/tabicl/s3: rate Gini 0.4440 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s3: predicted/actual = 0.367
+- **trivial_floor** — B/N10000/glm_hurdle/s4: rate Gini 0.4600 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/tabicl/s5: predicted/actual = 0.478
+- **trivial_floor** — B/N10000/glm_tweedie/s6: rate Gini 0.2183 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_hurdle/s19: predicted/actual = 0.448
+- **trivial_floor** — B/N20000/xgb_tweedie/s6: rate Gini 0.4346 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s6: predicted/actual = 0.378
+- **exposure_dependence** — B/N5000/xgb_hurdle/s5: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s5: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s5: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/tabicl/s12: predicted/actual = 0.389
+- **trivial_floor** — B/N10000/glm_tweedie/s8: rate Gini 0.4159 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N100000/glm_tweedie/s4: rate Gini 0.4257 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s0: rate Gini -0.0087 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s0: total-loss Gini -0.0202 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N5000/glm_tweedie/s7: rate Gini 0.3987 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s7: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s7: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s7: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s7: predicted/actual = 0.488
+- **calibration** — B/N10000/intercept/s16: predicted/actual = 0.471
+- **calibration** — B/N20000/intercept/s19: predicted/actual = 0.489
+- **trivial_floor** — B/N10000/xgb_tweedie/s2: rate Gini 0.4570 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s2: predicted/actual = 0.425
+- **calibration** — B/N20000/tabicl/s4: predicted/actual = 0.421
+- **exposure_dependence** — B/N5000/xgb_hurdle/s19: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s19: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s19: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **exposure_dependence** — B/N5000/xgb_hurdle/s14: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s14: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s14: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **exposure_dependence** — B/N5000/xgb_hurdle/s16: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s16: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s16: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s16: predicted/actual = 0.475
+- **calibration** — B/N10000/tabicl/s4: predicted/actual = 0.436
+- **trivial_floor** — B/N542410/glm_tweedie/s2: rate Gini 0.4503 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s1: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s1: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s1: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N10000/xgb_hurdle/s4: predicted/actual = 0.491
+- **trivial_floor** — B/N10000/xgb_tweedie/s15: rate Gini 0.4655 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s15: predicted/actual = 0.433
+- **trivial_floor** — B/N20000/glm_hurdle/s1: rate Gini 0.4340 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s10: rate Gini 0.4129 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s10: predicted/actual = 0.313
+- **exposure_dependence** — B/N5000/xgb_hurdle/s12: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s12: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s12: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N10000/xgb_tweedie/s4: rate Gini 0.3978 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s4: predicted/actual = 0.337
+- **trivial_floor** — B/N10000/xgb_tweedie/s14: rate Gini 0.4123 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s14: predicted/actual = 0.351
+- **trivial_floor** — B/N10000/glm_tweedie/s2: rate Gini 0.2058 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/one_over_exposure/s7: predicted/actual = 0.485
+- **calibration** — B/N5000/glm_hurdle/s6: predicted/actual = 0.483
+- **calibration** — B/N10000/glm_hurdle/s11: predicted/actual = 0.466
+- **calibration** — B/N20000/glm_hurdle/s7: predicted/actual = 0.475
+- **trivial_floor** — B/N10000/glm_tweedie/s1: rate Gini 0.4308 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/tabicl/s17: predicted/actual = 0.342
+- **trivial_floor** — B/N20000/xgb_tweedie/s7: rate Gini 0.4346 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s7: predicted/actual = 0.331
+- **trivial_floor** — B/N10000/xgb_tweedie/s1: rate Gini 0.4329 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s1: predicted/actual = 0.423
+- **trivial_floor** — B/N5000/xgb_tweedie/s7: rate Gini 0.4398 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s7: predicted/actual = 0.318
+- **trivial_floor** — B/N10000/xgb_tweedie/s0: rate Gini 0.3206 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s0: predicted/actual = 0.372
+- **trivial_floor** — B/N5000/glm_tweedie/s13: rate Gini 0.3368 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_tweedie/s12: rate Gini 0.4363 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s12: predicted/actual = 0.385
+- **calibration** — B/N20000/tabicl/s0: predicted/actual = 0.394
+- **trivial_floor** — B/N10000/xgb_tweedie/s3: rate Gini 0.4127 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s3: predicted/actual = 0.403
+- **calibration** — B/N20000/xgb_tweedie/s17: predicted/actual = 0.437
+- **trivial_floor** — B/N10000/glm_hurdle/s6: rate Gini 0.4396 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_tweedie/s18: rate Gini 0.3425 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s4: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s4: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s4: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s4: predicted/actual = 0.453
+- **calibration** — B/N10000/tabicl/s8: predicted/actual = 0.479
+- **calibration** — B/N10000/tabicl/s12: predicted/actual = 0.393
+- **calibration** — B/N20000/xgb_hurdle/s3: predicted/actual = 0.497
+- **trivial_floor** — B/N5000/xgb_tweedie/s9: rate Gini 0.4239 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s9: predicted/actual = 0.400
+- **calibration** — B/N10000/tabicl/s18: predicted/actual = 0.433
+- **trivial_floor** — B/N5000/xgb_tweedie/s16: rate Gini 0.2767 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s16: predicted/actual = 0.297
+- **trivial_floor** — B/N10000/xgb_tweedie/s6: rate Gini 0.4388 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s6: predicted/actual = 0.391
+- **calibration** — B/N5000/glm_hurdle/s4: predicted/actual = 0.456
+- **trivial_floor** — B/N5000/glm_tweedie/s10: rate Gini 0.3857 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s4: rate Gini 0.4155 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s14: rate Gini 0.3654 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s14: predicted/actual = 0.418
+- **trivial_floor** — B/N20000/glm_tweedie/s2: rate Gini 0.4561 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_hurdle/s16: predicted/actual = 0.426
+- **trivial_floor** — B/N20000/glm_hurdle/s4: rate Gini 0.4520 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/tabicl/s19: predicted/actual = 0.341
+- **trivial_floor** — B/N20000/glm_hurdle/s9: rate Gini 0.4324 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/one_over_exposure/s3: predicted/actual = 0.476
+- **calibration** — B/N10000/glm_hurdle/s9: predicted/actual = 0.489
+- **trivial_floor** — B/N5000/glm_tweedie/s18: rate Gini 0.2910 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_hurdle/s7: predicted/actual = 0.450
+- **trivial_floor** — B/N5000/xgb_tweedie/s18: rate Gini 0.2558 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s18: predicted/actual = 0.330
+- **trivial_floor** — B/N20000/glm_tweedie/s10: rate Gini 0.3647 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_hurdle/s17: rate Gini 0.4038 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s4: predicted/actual = 0.353
+- **trivial_floor** — B/N10000/xgb_tweedie/s7: rate Gini 0.4630 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s7: predicted/actual = 0.441
+- **trivial_floor** — B/N10000/glm_hurdle/s2: rate Gini 0.4400 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s2: predicted/actual = 0.453
+- **trivial_floor** — B/N20000/glm_tweedie/s6: rate Gini 0.4528 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s7: rate Gini 0.4335 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/glm_tweedie/s7: predicted/actual = 1.510
+- **calibration** — B/N20000/xgb_hurdle/s4: predicted/actual = 0.499
+- **trivial_floor** — B/N10000/xgb_tweedie/s18: rate Gini 0.4154 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s18: predicted/actual = 0.376
+- **trivial_floor** — B/N100000/glm_tweedie/s1: rate Gini 0.4353 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_hurdle/s0: rate Gini 0.4168 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s2: rate Gini 0.3934 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s17: rate Gini 0.3612 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/tabicl/s0: rate Gini 0.4573 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_tweedie/s11: rate Gini 0.4540 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s11: predicted/actual = 0.347
+- **trivial_floor** — B/N20000/glm_tweedie/s14: rate Gini 0.1478 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_hurdle/s19: rate Gini 0.3003 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/xgb_tweedie/s18: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s18: predicted/actual = 0.368
+- **trivial_floor** — B/N5000/glm_hurdle/s3: rate Gini 0.3891 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_hurdle/s3: predicted/actual = 0.460
+- **trivial_floor** — B/N20000/xgb_tweedie/s16: rate Gini 0.4278 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s16: predicted/actual = 0.369
+- **trivial_floor** — B/N20000/glm_tweedie/s13: rate Gini 0.4346 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s3: rate Gini 0.3610 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s3: predicted/actual = 0.269
+- **trivial_floor** — B/N10000/glm_tweedie/s12: rate Gini 0.3522 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_tweedie/s4: rate Gini 0.3574 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/tabicl/s14: rate Gini 0.3545 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s14: predicted/actual = 0.433
+- **trivial_floor** — B/N5000/glm_tweedie/s6: rate Gini 0.4208 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_tweedie/s8: rate Gini 0.3602 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N100000/xgb_tweedie/s2: rate Gini 0.4631 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s18: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s18: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s18: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N10000/tabicl/s9: predicted/actual = 0.393
+- **trivial_floor** — B/N5000/xgb_tweedie/s4: rate Gini 0.4460 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s4: predicted/actual = 0.254
+- **trivial_floor** — B/N20000/xgb_tweedie/s1: rate Gini 0.4626 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s1: predicted/actual = 0.406
+- **calibration** — B/N10000/tabicl/s16: predicted/actual = 0.360
+- **calibration** — B/N10000/glm_hurdle/s14: predicted/actual = 0.468
+- **calibration** — B/N5000/intercept/s3: predicted/actual = 0.474
+- **trivial_floor** — B/N5000/glm_tweedie/s14: rate Gini -0.0428 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s14: total-loss Gini -0.0123 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N20000/glm_tweedie/s1: rate Gini 0.2644 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s15: rate Gini 0.3468 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/tabicl/s15: rate Gini 0.4632 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s15: predicted/actual = 0.455
+- **exposure_dependence** — B/N5000/xgb_hurdle/s15: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s15: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s15: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N20000/tabicl/s16: predicted/actual = 0.364
+- **calibration** — B/N5000/tabicl/s7: predicted/actual = 0.397
+- **trivial_floor** — B/N10000/glm_tweedie/s14: rate Gini 0.3485 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/glm_tweedie/s14: predicted/actual = 0.481
+- **trivial_floor** — B/N5000/xgb_tweedie/s17: rate Gini 0.3529 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s17: predicted/actual = 0.276
+- **trivial_floor** — B/N10000/glm_tweedie/s3: rate Gini 0.4569 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/one_over_exposure/s7: predicted/actual = 1.907
+- **calibration** — B/N10000/tabicl/s10: predicted/actual = 0.439
+- **trivial_floor** — B/N100000/glm_tweedie/s3: rate Gini 0.4424 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/tabicl/s13: predicted/actual = 0.472
+- **calibration** — B/N5000/one_over_exposure/s4: predicted/actual = 0.490
+- **calibration** — B/N10000/xgb_hurdle/s14: predicted/actual = 0.458
+- **exposure_dependence** — B/N5000/xgb_hurdle/s6: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s6: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s6: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s6: predicted/actual = 0.473
+- **trivial_floor** — B/N5000/xgb_tweedie/s2: rate Gini 0.3549 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s2: predicted/actual = 0.281
+- **trivial_floor** — B/N5000/glm_hurdle/s2: rate Gini 0.4509 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s5: rate Gini 0.3853 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s19: rate Gini 0.3752 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s19: predicted/actual = 0.317
+- **trivial_floor** — B/N10000/tabicl/s5: rate Gini 0.4639 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s1: predicted/actual = 0.424
+- **trivial_floor** — B/N20000/xgb_tweedie/s8: rate Gini 0.4505 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s8: predicted/actual = 0.479
+- **trivial_floor** — B/N5000/glm_hurdle/s14: rate Gini 0.1228 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_hurdle/s14: total-loss Gini -0.0049 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N100000/glm_tweedie/s2: rate Gini 0.3323 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/xgb_tweedie/s0: rate Gini 0.3965 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s0: predicted/actual = 0.392
+- **trivial_floor** — B/N10000/glm_tweedie/s0: rate Gini 0.2030 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s18: rate Gini 0.4140 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/xgb_hurdle/s14: rate Gini 0.4246 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/glm_hurdle/s17: predicted/actual = 0.479
+- **calibration** — B/N20000/tabicl/s13: predicted/actual = 0.405
+- **trivial_floor** — B/N20000/glm_hurdle/s15: rate Gini 0.4399 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/tabicl/s6: rate Gini 0.4310 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N542410/glm_tweedie/s1: rate Gini 0.4503 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s8: rate Gini 0.4005 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s8: predicted/actual = 0.284
+- **trivial_floor** — B/N5000/glm_hurdle/s5: rate Gini 0.3570 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s15: rate Gini 0.3369 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s16: rate Gini 0.3692 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/glm_tweedie/s16: predicted/actual = 0.479
+- **trivial_floor** — B/N10000/glm_tweedie/s9: rate Gini 0.3301 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s5: predicted/actual = 0.461
+- **calibration** — B/N20000/xgb_tweedie/s5: predicted/actual = 0.417
+- **calibration** — B/N20000/xgb_tweedie/s15: predicted/actual = 0.392
+- **exposure_dependence** — B/N5000/xgb_hurdle/s2: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s2: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s2: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N20000/tabicl/s15: predicted/actual = 0.440
+- **trivial_floor** — B/N5000/xgb_tweedie/s5: rate Gini 0.3934 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s5: predicted/actual = 0.272
+- **trivial_floor** — B/N5000/xgb_tweedie/s0: rate Gini 0.4436 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s0: predicted/actual = 0.309
+- **trivial_floor** — B/N20000/glm_tweedie/s3: rate Gini 0.4339 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_hurdle/s12: predicted/actual = 0.467
+- **trivial_floor** — B/N5000/glm_hurdle/s0: rate Gini 0.3341 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/xgb_tweedie/s14: rate Gini 0.3810 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s14: predicted/actual = 0.478
+- **calibration** — B/N10000/xgb_hurdle/s8: predicted/actual = 0.489
+- **trivial_floor** — B/N10000/xgb_tweedie/s16: rate Gini 0.4564 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s16: predicted/actual = 0.330
+- **trivial_floor** — B/N5000/glm_tweedie/s11: rate Gini 0.4393 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_tweedie/s8: rate Gini 0.4297 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s8: predicted/actual = 0.354
+- **calibration** — B/N10000/intercept/s14: predicted/actual = 0.478
+- **calibration** — B/N10000/intercept/s7: predicted/actual = 1.899
+- **calibration** — B/N20000/tabicl/s3: predicted/actual = 0.400
+- **trivial_floor** — B/N5000/glm_tweedie/s9: rate Gini 0.3820 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_hurdle/s15: rate Gini 0.4128 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/tabicl/s16: rate Gini 0.2533 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s16: predicted/actual = 0.353
+- **trivial_floor** — B/N5000/glm_tweedie/s19: rate Gini 0.2711 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_hurdle/s9: predicted/actual = 0.474
+- **trivial_floor** — B/N20000/glm_tweedie/s11: rate Gini 0.4527 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s2: predicted/actual = 0.411
+- **trivial_floor** — B/N20000/glm_tweedie/s9: rate Gini 0.2348 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s12: predicted/actual = 0.393
+- **calibration** — B/N20000/glm_hurdle/s12: predicted/actual = 0.483
+- **trivial_floor** — B/N5000/glm_hurdle/s18: rate Gini 0.4100 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s13: rate Gini 0.3661 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_hurdle/s15: rate Gini 0.3484 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s13: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s13: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s13: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N20000/xgb_tweedie/s10: predicted/actual = 0.459
+- **calibration** — B/N5000/glm_hurdle/s7: predicted/actual = 0.492
+- **trivial_floor** — B/N5000/glm_tweedie/s3: rate Gini 0.2216 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_tweedie/s3: predicted/actual = 0.482
+- **calibration** — B/N5000/tabicl/s18: predicted/actual = 0.436
+- **trivial_floor** — B/N20000/glm_tweedie/s7: rate Gini 0.4449 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/glm_tweedie/s7: predicted/actual = 0.486
+- **trivial_floor** — B/N20000/glm_tweedie/s16: rate Gini 0.2243 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s5: rate Gini 0.2070 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_hurdle/s17: predicted/actual = 0.490
+- **calibration** — B/N5000/tabicl/s6: predicted/actual = 0.349
+- **exposure_dependence** — B/N5000/xgb_hurdle/s3: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s3: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s3: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s3: predicted/actual = 0.461
+- **trivial_floor** — B/N10000/xgb_tweedie/s9: rate Gini 0.4554 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s9: predicted/actual = 0.364
+- **trivial_floor** — B/N100000/glm_tweedie/s0: rate Gini 0.3349 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/tabicl/s18: predicted/actual = 0.389
+- **trivial_floor** — B/N10000/glm_hurdle/s12: rate Gini 0.4191 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s13: predicted/actual = 0.383
+- **trivial_floor** — B/N20000/xgb_tweedie/s19: rate Gini 0.4653 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s19: predicted/actual = 0.339
+- **exposure_dependence** — B/N20000/xgb_hurdle/s16: Spearman(pred, 1/exposure)=+0.9563 -- prediction is nearly a function of exposure alone
+- **calibration** — B/N20000/xgb_hurdle/s16: predicted/actual = 0.461
+- **trivial_floor** — B/N20000/glm_tweedie/s12: rate Gini 0.4022 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_hurdle/s16: rate Gini 0.4315 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/glm_hurdle/s16: predicted/actual = 0.474
+- **trivial_floor** — B/N10000/xgb_tweedie/s19: rate Gini 0.3271 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s19: predicted/actual = 0.445
+- **calibration** — B/N20000/glm_hurdle/s19: predicted/actual = 0.457
+- **calibration** — B/N10000/tabicl/s3: predicted/actual = 0.423
+- **trivial_floor** — B/N5000/glm_tweedie/s8: rate Gini 0.4285 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s16: rate Gini 0.1827 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s4: rate Gini 0.4308 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/glm_tweedie/s4: predicted/actual = 0.477
+- **trivial_floor** — B/N10000/xgb_hurdle/s0: rate Gini 0.4164 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_hurdle/s0: total-loss Gini 0.0054 ~ 0 -- no signal on which policies cost most
+- **trivial_floor** — B/N5000/glm_hurdle/s19: rate Gini 0.3963 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_hurdle/s11: predicted/actual = 0.447
+- **exposure_dependence** — B/N5000/xgb_hurdle/s17: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s17: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s17: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N5000/xgb_hurdle/s17: predicted/actual = 0.500
+- **calibration** — B/N10000/tabicl/s14: predicted/actual = 0.367
+- **calibration** — B/N10000/xgb_tweedie/s13: predicted/actual = 0.410
+- **calibration** — B/N5000/tabicl/s8: predicted/actual = 0.366
+- **calibration** — B/N20000/intercept/s7: predicted/actual = 0.484
+- **calibration** — B/N5000/tabicl/s10: predicted/actual = 0.499
+- **trivial_floor** — B/N5000/glm_hurdle/s1: rate Gini 0.3789 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N100000/tabicl/s3: predicted/actual = 0.498
+- **exposure_dependence** — B/N5000/xgb_hurdle/s10: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s10: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s10: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **calibration** — B/N20000/tabicl/s12: predicted/actual = 0.357
+- **calibration** — B/N10000/xgb_hurdle/s17: predicted/actual = 0.455
+- **trivial_floor** — B/N20000/glm_tweedie/s5: rate Gini 0.4066 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s15: rate Gini 0.4383 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s15: predicted/actual = 0.284
+- **trivial_floor** — B/N20000/xgb_tweedie/s4: rate Gini 0.4416 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s4: predicted/actual = 0.484
+- **calibration** — B/N20000/xgb_tweedie/s9: predicted/actual = 0.447
+- **calibration** — B/N5000/intercept/s4: predicted/actual = 0.488
+- **calibration** — B/N10000/tabicl/s11: predicted/actual = 0.356
+- **trivial_floor** — B/N10000/glm_hurdle/s10: rate Gini 0.4342 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_tweedie/s19: rate Gini 0.4307 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/glm_tweedie/s19: predicted/actual = 0.488
+- **trivial_floor** — B/N542410/glm_tweedie/s0: rate Gini 0.4503 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_hurdle/s12: rate Gini 0.4459 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s11: predicted/actual = 0.498
+- **trivial_floor** — B/N10000/glm_hurdle/s5: rate Gini 0.4217 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/glm_tweedie/s10: rate Gini 0.3576 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/tabicl/s17: predicted/actual = 0.370
+- **trivial_floor** — B/N10000/glm_hurdle/s16: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/glm_hurdle/s16: predicted/actual = 0.460
+- **calibration** — B/N20000/tabicl/s6: predicted/actual = 0.388
+- **calibration** — B/N20000/one_over_exposure/s19: predicted/actual = 0.490
+- **trivial_floor** — B/N5000/xgb_tweedie/s13: rate Gini 0.4124 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s13: predicted/actual = 0.272
+- **trivial_floor** — B/N20000/glm_hurdle/s14: rate Gini 0.2695 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N20000/glm_tweedie/s17: rate Gini 0.1541 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_tweedie/s1: rate Gini 0.3553 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s1: predicted/actual = 0.289
+- **calibration** — B/N20000/tabicl/s1: predicted/actual = 0.421
+- **calibration** — B/N10000/one_over_exposure/s16: predicted/actual = 0.472
+- **trivial_floor** — B/N5000/xgb_tweedie/s12: rate Gini 0.4194 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N5000/xgb_tweedie/s12: predicted/actual = 0.268
+- **calibration** — B/N10000/tabicl/s1: predicted/actual = 0.448
+- **trivial_floor** — B/N20000/xgb_tweedie/s3: rate Gini 0.4556 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N20000/xgb_tweedie/s3: predicted/actual = 0.381
+- **trivial_floor** — B/N10000/glm_tweedie/s19: rate Gini 0.1537 does not beat the 1/exposure floor (0.4676)
+- **exposure_dependence** — B/N5000/xgb_hurdle/s0: Spearman(pred, 1/exposure)=+1.0000 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N5000/xgb_hurdle/s0: rate Gini 0.4676 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/xgb_hurdle/s0: total-loss Gini -0.0000 ~ 0 -- no signal on which policies cost most
+- **exposure_dependence** — B/N5000/xgb_hurdle/s9: Spearman(pred, 1/exposure)=+0.9839 -- prediction is nearly a function of exposure alone
+- **trivial_floor** — B/N10000/glm_tweedie/s17: rate Gini 0.4115 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N5000/glm_tweedie/s12: rate Gini 0.3500 does not beat the 1/exposure floor (0.4676)
+- **trivial_floor** — B/N10000/xgb_tweedie/s10: rate Gini 0.4289 does not beat the 1/exposure floor (0.4676)
+- **calibration** — B/N10000/xgb_tweedie/s10: predicted/actual = 0.362
+- **calibration** — B/N20000/tabicl/s7: predicted/actual = 0.368
+- **curve_monotonicity** — intercept/tweedie_deviance_1.5 worsens from N=1,000 to N=2,000 (102.9256 -> 112.9906, 10065068050649.0 pooled SD)
+
+## INFO (40)
+
+- **zero_variance** — intercept/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_exposure_weighted constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_exposure_weighted constant across 5 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_exposure_weighted constant across 5 draws (expected for a reference line)
+- **zero_variance** — glm_hurdle/gini_exposure_weighted constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — glm_tweedie/gini_exposure_weighted constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — intercept/gini_exposure_weighted constant across 3 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_exposure_weighted constant across 3 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_total_loss constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_total_loss constant across 5 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_total_loss constant across 5 draws (expected for a reference line)
+- **zero_variance** — glm_hurdle/gini_total_loss constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — glm_tweedie/gini_total_loss constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — intercept/gini_total_loss constant across 3 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_total_loss constant across 3 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_fixed_exposure constant across 20 draws (expected for a reference line)
+- **zero_variance** — intercept/gini_fixed_exposure constant across 5 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_fixed_exposure constant across 5 draws (expected for a reference line)
+- **zero_variance** — glm_hurdle/gini_fixed_exposure constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — glm_tweedie/gini_fixed_exposure constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — intercept/gini_fixed_exposure constant across 3 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/gini_fixed_exposure constant across 3 draws (expected for a reference line)
+- **zero_variance** — glm_hurdle/tweedie_deviance_1.5 constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — glm_tweedie/tweedie_deviance_1.5 constant across 3 draws (expected: deterministic fitter and every draw saw the whole pool, so there is no subsample variance to measure at this N)
+- **zero_variance** — intercept/tweedie_deviance_1.5 constant across 3 draws (expected for a reference line)
+- **zero_variance** — one_over_exposure/tweedie_deviance_1.5 constant across 3 draws (expected for a reference line)

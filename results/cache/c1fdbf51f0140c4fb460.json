@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "A",
+    "region": "R11",
+    "model": "glm_hurdle",
+    "seed": 0,
+    "context": 20000,
+    "trials": 30,
+    "cap": "fixed",
+    "label": "A/R11/glm_hurdle/s0"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3784604988931677,
+    "normalized_gini_fixed_exposure": 0.39256649671765736,
+    "n_fixed_exposure": 9267.0,
+    "tweedie_deviance_1.5": 77.54772892824857,
+    "tweedie_deviance_1.9": 33.916971044172946,
+    "gini": 0.6208431488361853,
+    "normalized_gini": 0.6231334479558692,
+    "gini_exposure_weighted": 0.3201984136821753,
+    "normalized_gini_exposure_weighted": 0.32635852357134154,
+    "gini_total_loss": 0.2658439791399133,
+    "normalized_gini_total_loss": 0.2700781648699823,
+    "calibration_ratio": 1.258510105686591,
+    "mean_predicted_loss_cost": 190.17271776794598,
+    "mean_actual_loss_cost": 151.10940858452273,
+    "balance_factor": 1.3553398909352512,
+    "balanced_tweedie_deviance_1.5": 80.16305674137085,
+    "balanced_calibration_ratio": 1.705708949382176
+  },
+  "info": {
+    "n_train": 608222,
+    "n_test": 69791,
+    "region_te_levels": 1
+  }
+}

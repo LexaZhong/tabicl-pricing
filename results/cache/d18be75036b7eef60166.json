@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 10000,
+    "model": "tabicl",
+    "seed": 3,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N10000/tabicl/s3"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.35136219196692786,
+    "normalized_gini_fixed_exposure": 0.36187769358500893,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 96.51064393437495,
+    "tweedie_deviance_1.9": 35.34426163676843,
+    "gini": 0.611834474181687,
+    "normalized_gini": 0.614366718166238,
+    "gini_exposure_weighted": 0.5341157000581044,
+    "normalized_gini_exposure_weighted": 0.5400526874313376,
+    "gini_total_loss": 0.3287976441161826,
+    "normalized_gini_total_loss": 0.3322148530836973,
+    "calibration_ratio": 0.4225593707708865,
+    "mean_predicted_loss_cost": 91.25741205417324,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 10000,
+    "n_claims_stage2": 396,
+    "claim_rate": 0.0396,
+    "stage1_context_size": 10000,
+    "stage2_context_size": 396,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 12142.9785,
+    "peak_vram_mib": 4238.33837890625,
+    "fit_seconds": 0.9602302999992389,
+    "predict_seconds": 186.35457399999723,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.14947936480575905,
+    "stage1_brier": 0.03484829672552336,
+    "stage1_mean_pred": 0.03349078026712108,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6906581393121565,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.007078081646255232,
+    "exposure_p_last_decile": 0.05461983601065135,
+    "mean_exposure": 0.5290483712852758,
+    "total_loss": 747889.51,
+    "max_loss": 182500.0
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.0942"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.423"
+    }
+  ]
+}

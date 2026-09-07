@@ -1,0 +1,52 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "A",
+    "region": "R82",
+    "model": "tabicl",
+    "seed": 3,
+    "context": 20000,
+    "batch_size": 2,
+    "trials": 30,
+    "cap": "fixed",
+    "label": "A/R82/tabicl/s3"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.4297178919335086,
+    "normalized_gini_fixed_exposure": 0.44414860557593194,
+    "n_fixed_exposure": 23451.0,
+    "tweedie_deviance_1.5": 89.57365369108906,
+    "tweedie_deviance_1.9": 34.16583549355083,
+    "gini": 0.6001131800660913,
+    "normalized_gini": 0.603567931562329,
+    "gini_exposure_weighted": 0.4715093416263004,
+    "normalized_gini_exposure_weighted": 0.47924426199606535,
+    "gini_total_loss": 0.3485177482260514,
+    "normalized_gini_total_loss": 0.3539079375800362,
+    "calibration_ratio": 0.962685993937344,
+    "mean_predicted_loss_cost": 218.27077937250453,
+    "mean_actual_loss_cost": 226.73102210595846
+  },
+  "info": {
+    "n_train": 593261,
+    "n_test": 84752,
+    "region_te_levels": 1,
+    "stage1_context_size": 20000,
+    "stage2_context_size": 20942,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 9.109588386973545,
+    "severity_cap": 36736.482299997995,
+    "peak_vram_mib": 5264.2919921875,
+    "fit_seconds": 1.4787896999914665,
+    "predict_seconds": 191.4962996999966,
+    "stage1_log_loss": 0.18616985763312405,
+    "stage1_brier": 0.0450377590003158,
+    "stage1_mean_pred": 0.062070748065999284,
+    "stage1_base_rate": 0.04722012459882952,
+    "stage1_auc": 0.6653986830114356,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.011987751006779292,
+    "exposure_p_last_decile": 0.09524760745412611
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl",
+    "seed": 13,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl/s13"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3292272884537284,
+    "normalized_gini_fixed_exposure": 0.3390803408412701,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 97.35894825690548,
+    "tweedie_deviance_1.9": 35.68163553463949,
+    "gini": 0.6239399339713744,
+    "normalized_gini": 0.6265222797057061,
+    "gini_exposure_weighted": 0.5056884984595439,
+    "normalized_gini_exposure_weighted": 0.5113095019795995,
+    "gini_total_loss": 0.4107502111324971,
+    "normalized_gini_total_loss": 0.41501915688076574,
+    "calibration_ratio": 0.3832350908405115,
+    "mean_predicted_loss_cost": 82.76480186594561,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 200,
+    "claim_rate": 0.04,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 200,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 8753.083849999954,
+    "peak_vram_mib": 4198.92626953125,
+    "fit_seconds": 0.8470745999948122,
+    "predict_seconds": 79.4341781999974,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.15158955598271587,
+    "stage1_brier": 0.03502715187976196,
+    "stage1_mean_pred": 0.030517845168601187,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6845800111389313,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.008590959301792763,
+    "exposure_p_last_decile": 0.05284957824923145,
+    "mean_exposure": 0.5295132626693615,
+    "total_loss": 294790.67,
+    "max_loss": 18753.6
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.0106"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.383"
+    }
+  ]
+}

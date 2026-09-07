@@ -1,0 +1,54 @@
+[
+  {
+    "n": 10000,
+    "seed": 0,
+    "epochs_measured": 3,
+    "n_features": 16,
+    "n_claims_stage2": 363,
+    "stage1": {
+      "total_s": 223.74096799999825,
+      "epoch_s": [
+        67.3,
+        84.0,
+        59.8
+      ],
+      "setup_s": 12.640967999998225,
+      "peak_vram_mib": 13867.2041015625,
+      "oom_rung": 0,
+      "oom_patch": "{}"
+    },
+    "stage1_predict": {
+      "rows": 20000,
+      "seconds": 8.263384899997618,
+      "s_per_1k": 0.4131692449998809,
+      "peak_vram_mib": 5788.44873046875
+    },
+    "stage2": {
+      "total_s": 1.3848617999756243,
+      "epoch_s": [
+        0.2,
+        0.1,
+        0.1
+      ],
+      "setup_s": 0.9848617999756243,
+      "peak_vram_mib": 1015.26171875,
+      "oom_rung": 0,
+      "oom_patch": "{}",
+      "n_rows": 363
+    },
+    "stage2_predict": {
+      "rows": 20000,
+      "seconds": 6.2265376999857835,
+      "s_per_1k": 0.3113268849992892,
+      "peak_vram_mib": 8251.94140625
+    },
+    "projection": {
+      "stage1_s_per_epoch": 71.9,
+      "stage2_s_per_epoch": 0.1,
+      "fit_s": 2173.625829799974,
+      "predict_s": 98.24384871627745,
+      "config_s": 2271.8696785162515,
+      "config_min": 37.864494641937526
+    }
+  }
+]

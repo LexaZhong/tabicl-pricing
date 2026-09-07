@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl",
+    "seed": 17,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl/s17"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.34822375764134905,
+    "normalized_gini_fixed_exposure": 0.3586453327870225,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 98.02467062177563,
+    "tweedie_deviance_1.9": 35.66879894768711,
+    "gini": 0.6179041801475722,
+    "normalized_gini": 0.6204615452671176,
+    "gini_exposure_weighted": 0.5307194618973663,
+    "normalized_gini_exposure_weighted": 0.5366186982307506,
+    "gini_total_loss": 0.38998928702045343,
+    "normalized_gini_total_loss": 0.3940424635339994,
+    "calibration_ratio": 0.3696285924717316,
+    "mean_predicted_loss_cost": 79.8262944888901,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 180,
+    "claim_rate": 0.036,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 180,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 20353.695349999627,
+    "peak_vram_mib": 4191.8046875,
+    "fit_seconds": 0.8319122999964748,
+    "predict_seconds": 78.06365630000073,
+    "severity_clipped_frac": 0.0,
+    "stage1_log_loss": 0.15172859663551058,
+    "stage1_brier": 0.035077465345276095,
+    "stage1_mean_pred": 0.02735537617813428,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6852147348595319,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.004175266919171764,
+    "exposure_p_last_decile": 0.04628184778661724,
+    "mean_exposure": 0.5277134345385133,
+    "total_loss": 317478.08,
+    "max_loss": 52954.670000000006
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.1677"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.370"
+    }
+  ]
+}

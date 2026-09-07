@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "A",
+    "region": "R24",
+    "model": "xgb_tweedie",
+    "seed": 3,
+    "context": 20000,
+    "batch_size": 2,
+    "trials": 30,
+    "cap": "fixed",
+    "label": "A/R24/xgb_tweedie/s3"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3907273155077817,
+    "normalized_gini_fixed_exposure": 0.3983278068338088,
+    "n_fixed_exposure": 66397.0,
+    "tweedie_deviance_1.5": 80.02592064016609,
+    "tweedie_deviance_1.9": 33.804872507272876,
+    "gini": 0.5307726058458673,
+    "normalized_gini": 0.5330778365945549,
+    "gini_exposure_weighted": 0.5431868026437967,
+    "normalized_gini_exposure_weighted": 0.5485843614874494,
+    "gini_total_loss": 0.43786303217554423,
+    "normalized_gini_total_loss": 0.442428675897099,
+    "calibration_ratio": 0.6212753647798822,
+    "mean_predicted_loss_cost": 115.38423884279308,
+    "mean_actual_loss_cost": 185.7215743355182,
+    "balance_factor": 1.1441179871235843,
+    "balanced_tweedie_deviance_1.5": 79.45261168913648,
+    "balanced_calibration_ratio": 0.710812297470928
+  },
+  "info": {
+    "n_train": 517412,
+    "n_test": 160601,
+    "region_te_levels": 1,
+    "tuned": true,
+    "n_trials": 30
+  }
+}

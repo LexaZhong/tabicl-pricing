@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "one_over_exposure",
+    "seed": 11,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N5000/one_over_exposure/s11"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.02189440652679908,
+    "normalized_gini_fixed_exposure": 0.022549658208747693,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 94.1938632793003,
+    "tweedie_deviance_1.9": 35.02823908267741,
+    "gini": 0.47877842378378,
+    "normalized_gini": 0.48075997898329836,
+    "gini_exposure_weighted": 0.4676069945192445,
+    "normalized_gini_exposure_weighted": 0.47280470134904606,
+    "gini_total_loss": -7.771561172376096e-15,
+    "normalized_gini_total_loss": -7.852331363419339e-15,
+    "calibration_ratio": 0.674653108853932,
+    "mean_predicted_loss_cost": 145.7004648506404,
+    "mean_actual_loss_cost": 215.96352694223742,
+    "balance_factor": 1.0,
+    "balanced_tweedie_deviance_1.5": 94.1938632793003
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 191,
+    "claim_rate": 0.0382,
+    "mean_exposure": 0.5288499660154202,
+    "total_loss": 383935.0,
+    "max_loss": 40199.19
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.18e-17 -- collapsed to a constant premium (no risk differentiation)"
+    }
+  ]
+}

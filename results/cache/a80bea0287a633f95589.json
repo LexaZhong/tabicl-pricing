@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "A",
+    "region": "R93",
+    "model": "xgb_hurdle",
+    "seed": 4,
+    "context": 20000,
+    "batch_size": 2,
+    "trials": 30,
+    "cap": "fixed",
+    "label": "A/R93/xgb_hurdle/s4"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.16792572187104193,
+    "normalized_gini_fixed_exposure": 0.17234590633897376,
+    "n_fixed_exposure": 13044.0,
+    "tweedie_deviance_1.5": 93.02650023907914,
+    "tweedie_deviance_1.9": 35.558426708462484,
+    "gini": 0.37665485163454515,
+    "normalized_gini": 0.3793952780799322,
+    "gini_exposure_weighted": 0.2689544741895977,
+    "normalized_gini_exposure_weighted": 0.2731629869083257,
+    "gini_total_loss": 0.3604121097002322,
+    "normalized_gini_total_loss": 0.3650429450939618,
+    "calibration_ratio": 0.6459872921852311,
+    "mean_predicted_loss_cost": 124.16003419010609,
+    "mean_actual_loss_cost": 192.2019762495642,
+    "balance_factor": 1.4149934368191879,
+    "balanced_tweedie_deviance_1.5": 89.97633532451681,
+    "balanced_calibration_ratio": 0.914067778710701
+  },
+  "info": {
+    "n_train": 598698,
+    "n_test": 79315,
+    "region_te_levels": 1,
+    "tuned": true,
+    "n_trials": 30
+  }
+}

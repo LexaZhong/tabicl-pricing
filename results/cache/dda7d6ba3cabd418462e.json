@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 50000,
+    "model": "tabicl",
+    "seed": 3,
+    "context": 20000,
+    "trials": 25,
+    "test_rows": 135603,
+    "label": "B/N50000/tabicl/s3"
+  },
+  "metrics": {
+    "tweedie_deviance_1.5": 91.78661491942997,
+    "tweedie_deviance_1.9": 34.69696017196818,
+    "gini": 0.5812186934767293,
+    "normalized_gini": 0.5836242256956085,
+    "gini_exposure_weighted": 0.5123806939305073,
+    "normalized_gini_exposure_weighted": 0.5180760848539028,
+    "calibration_ratio": 0.6024046901075898,
+    "mean_predicted_loss_cost": 130.09744152218067,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 50000,
+    "n_claims_stage2": 1867,
+    "claim_rate": 0.03734,
+    "stage1_context_size": 20000,
+    "stage2_context_size": 1867,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 2.6544421772459055,
+    "severity_cap": 41625.01150000026,
+    "peak_vram_mib": 5148.4248046875,
+    "fit_seconds": 1.1095698999997694,
+    "predict_seconds": 143.7732432000048,
+    "stage1_log_loss": 0.14904922667242718,
+    "stage1_brier": 0.034703674553315404,
+    "stage1_mean_pred": 0.036153650467830103,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6917924038736666
+  }
+}

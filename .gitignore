@@ -1,0 +1,21 @@
+# Virtual environment (5 GB, rebuild with: python -m venv .venv && pip install -r requirements.txt)
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Excel lock files left behind by an open workbook
+~$*.xlsx
+
+# Editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# NOTE: results/cache/ and data/ are deliberately TRACKED.
+# results/cache/ holds every cached config result and the saved predictions -- roughly
+# 10+ GPU-hours of work that would otherwise have to be re-fitted on another machine.
+# data/ holds the cleaned freMTPL2 parquet plus the split hashes, so a clone reproduces
+# the identical train/test split without an OpenML round-trip.
