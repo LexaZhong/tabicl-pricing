@@ -1,0 +1,68 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 10000,
+    "model": "tabicl_raw",
+    "seed": 12,
+    "context": 20000,
+    "trials": 30,
+    "test_rows": 135603,
+    "label": "B/N10000/tabicl_raw/s12"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3875451896646023,
+    "normalized_gini_fixed_exposure": 0.39914356923465355,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 101.16077633235348,
+    "tweedie_deviance_1.9": 35.863483474755554,
+    "gini": 0.5236529608302658,
+    "normalized_gini": 0.5258202415508043,
+    "gini_exposure_weighted": 0.5082380164492626,
+    "normalized_gini_exposure_weighted": 0.5138873592525692,
+    "gini_total_loss": 0.16692461729866537,
+    "normalized_gini_total_loss": 0.16865947248798782,
+    "calibration_ratio": 0.40417922184533667,
+    "mean_predicted_loss_cost": 87.28797026648792,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 10000,
+    "n_claims_stage2": 372,
+    "claim_rate": 0.0372,
+    "stage1_context_size": 10000,
+    "stage2_context_size": 372,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 13899.289499999884,
+    "peak_vram_mib": 3035.96044921875,
+    "fit_seconds": 1.4929169999959413,
+    "predict_seconds": 83.0339916999801,
+    "severity_clipped_frac": 0.0,
+    "n_features": 9,
+    "stage1_log_loss": 0.1502328309245955,
+    "stage1_brier": 0.03480896203862964,
+    "stage1_mean_pred": 0.027881928928847537,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6933960584814538,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.004306228079702152,
+    "exposure_p_last_decile": 0.04883522772367076,
+    "mean_exposure": 0.5285018181001572,
+    "total_loss": 638493.71,
+    "max_loss": 32288.28
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.2586"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.404"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl_raw",
+    "seed": 3,
+    "context": 20000,
+    "trials": 30,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl_raw/s3"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3226482650640383,
+    "normalized_gini_fixed_exposure": 0.33230442167656105,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 110.70843128522309,
+    "tweedie_deviance_1.9": 37.5088724666915,
+    "gini": 0.479947537561941,
+    "normalized_gini": 0.48193393145796454,
+    "gini_exposure_weighted": 0.40986387402308433,
+    "normalized_gini_exposure_weighted": 0.41441973456894504,
+    "gini_total_loss": 0.15884768628603996,
+    "normalized_gini_total_loss": 0.16049859756158977,
+    "calibration_ratio": 0.3468036291423572,
+    "mean_predicted_loss_cost": 74.89693490595117,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 188,
+    "claim_rate": 0.0376,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 188,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 9400.79789999998,
+    "peak_vram_mib": 3006.490234375,
+    "fit_seconds": 0.6531505000020843,
+    "predict_seconds": 63.48388330001035,
+    "severity_clipped_frac": 0.0,
+    "n_features": 9,
+    "stage1_log_loss": 0.15237155458304658,
+    "stage1_brier": 0.03501846764655151,
+    "stage1_mean_pred": 0.027852568282519044,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6899065537025612,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.005658009783628414,
+    "exposure_p_last_decile": 0.04601384914930187,
+    "mean_exposure": 0.5293742335504155,
+    "total_loss": 270914.99,
+    "max_loss": 17420.91
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.1593"
+    },
+    {
+      "check": "trivial_floor",
+      "severity": "WARN",
+      "message": "rate Gini 0.4099 does not beat the 1/exposure floor (0.4676)"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.347"
+    }
+  ]
+}

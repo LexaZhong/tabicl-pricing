@@ -26,7 +26,11 @@ import pandas as pd
 from src import checks as C
 from src import metrics as M
 from src.data import build_and_cache, exposure_stratified_subsample, random_split
-from src.features.insurance_features import EngineeredFeaturePipeline, GBMFeaturePipeline
+from src.features.insurance_features import (
+    EngineeredFeaturePipeline,
+    GBMFeaturePipeline,
+    RawFeaturePipeline,
+)
 from src.models.gbm import DEFAULT_PARAMS, XGBHurdle, XGBTweedie, sample_params
 from src.models.glm import GLMHurdle, InterceptOnly, TweedieGLM, balance_to_portfolio
 from src.models.tabicl_twostage import TabICLTwoStage
@@ -87,8 +91,18 @@ def make_runner(df: pd.DataFrame, context_size: int, n_trials: int, test_rows: i
 
         assert not (set(train["IDpol"]) & set(test["IDpol"])), "train/test overlap"
 
-        kind = "glm" if model.startswith("glm") or model == "intercept" else "gbm"
-        pipe = GBMFeaturePipeline() if kind == "gbm" else EngineeredFeaturePipeline()
+        # `tabicl_raw` is the feature-engineering ablation: identical model, identical
+        # draw (same seed -> same exposure_stratified_subsample), only the feature set
+        # differs. TabICL's pitch is that it removes the actuarial feature-engineering
+        # step, so the paired gap against `tabicl` measures exactly what that step is worth.
+        if model == "tabicl_raw":
+            kind = "raw"
+        elif model.startswith("glm") or model == "intercept":
+            kind = "glm"
+        else:
+            kind = "gbm"
+        pipe = {"gbm": GBMFeaturePipeline, "glm": EngineeredFeaturePipeline,
+                "raw": RawFeaturePipeline}[kind]()
         y_tr = train["PurePremium"].to_numpy()
         X_tr = pipe.fit_transform(train, y_tr)
         X_te = pipe.transform(test)
@@ -127,7 +141,7 @@ def make_runner(df: pd.DataFrame, context_size: int, n_trials: int, test_rows: i
                     X_tr, train["has_loss"].to_numpy(), train["TotalLoss"].to_numpy(), e_tr
                 )
                 pred_te, pred_tr = m.predict(X_te, e_te), m.predict(X_tr, e_tr)
-        elif model == "tabicl":
+        elif model in ("tabicl", "tabicl_raw"):
             # At small N the whole training set IS the context -- TabICL's home turf.
             m = TabICLTwoStage(
                 context_size=min(context_size, len(train)),
@@ -140,6 +154,7 @@ def make_runner(df: pd.DataFrame, context_size: int, n_trials: int, test_rows: i
             pred_tr = None
             info.update({k: v for k, v in m.info.__dict__.items() if k != "extra"})
             info.update(m.info.extra)  # carries severity_clipped_frac
+            info["n_features"] = int(X_tr.shape[1])
             p_hat = m._last_p_hat  # cached by predict(); recomputing costs a full ICL pass
             info.update(M.stage1_metrics(test["has_loss"].to_numpy(), p_hat))
             info.update(M.exposure_monotonicity(p_hat, e_te))
@@ -191,7 +206,7 @@ def main() -> int:
 
     grid = [int(x) for x in args.n_grid.split(",")] if args.n_grid else N_GRID
     models = ["intercept", "one_over_exposure", "glm_tweedie", "glm_hurdle",
-              "xgb_tweedie", "xgb_hurdle", "tabicl"]
+              "xgb_tweedie", "xgb_hurdle", "tabicl", "tabicl_raw"]
     if args.models:
         wanted = {m.strip() for m in args.models.split(",")}
         models = [m for m in models if m in wanted]

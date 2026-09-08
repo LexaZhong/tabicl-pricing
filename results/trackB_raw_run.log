@@ -1,0 +1,182 @@
+﻿Track B: 60 configs over N grid [5000, 10000, 20000]
+
+  [cached] B/N5000/tabicl_raw/s0
+  [run]    B/N5000/tabicl_raw/s1
+      [WARN] trivial_floor: rate Gini 0.4557 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.419
+  [run]    B/N5000/tabicl_raw/s2
+      [WARN] calibration: predicted/actual = 0.455
+  [run]    B/N5000/tabicl_raw/s3
+      [WARN] trivial_floor: rate Gini 0.4099 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.347
+  [run]    B/N5000/tabicl_raw/s4
+      [WARN] calibration: predicted/actual = 0.360
+  [run]    B/N5000/tabicl_raw/s5
+      [WARN] trivial_floor: rate Gini 0.4377 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.403
+  [run]    B/N5000/tabicl_raw/s6
+      [WARN] calibration: predicted/actual = 0.358
+  [run]    B/N5000/tabicl_raw/s7
+      [WARN] calibration: predicted/actual = 0.410
+  [run]    B/N5000/tabicl_raw/s8
+      [WARN] calibration: predicted/actual = 0.387
+  [run]    B/N5000/tabicl_raw/s9
+  [run]    B/N5000/tabicl_raw/s10
+  [run]    B/N5000/tabicl_raw/s11
+      [WARN] calibration: predicted/actual = 0.494
+  [run]    B/N5000/tabicl_raw/s12
+      [WARN] calibration: predicted/actual = 0.400
+  [run]    B/N5000/tabicl_raw/s13
+      [WARN] calibration: predicted/actual = 0.382
+  [run]    B/N5000/tabicl_raw/s14
+      [WARN] trivial_floor: rate Gini 0.3841 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.467
+  [run]    B/N5000/tabicl_raw/s15
+  [run]    B/N5000/tabicl_raw/s16
+      [WARN] trivial_floor: rate Gini 0.2500 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.366
+  [run]    B/N5000/tabicl_raw/s17
+      [WARN] calibration: predicted/actual = 0.378
+  [run]    B/N5000/tabicl_raw/s18
+      [WARN] trivial_floor: rate Gini 0.4643 does not beat the 1/exposure floor (0.4676)
+      [WARN] calibration: predicted/actual = 0.477
+  [run]    B/N5000/tabicl_raw/s19
+      [WARN] calibration: predicted/actual = 0.414
+  [run]    B/N10000/tabicl_raw/s0
+      [WARN] calibration: predicted/actual = 0.407
+  [run]    B/N10000/tabicl_raw/s1
+      [WARN] calibration: predicted/actual = 0.435
+  [run]    B/N10000/tabicl_raw/s2
+  [run]    B/N10000/tabicl_raw/s3
+      [WARN] calibration: predicted/actual = 0.387
+  [run]    B/N10000/tabicl_raw/s4
+      [WARN] calibration: predicted/actual = 0.428
+  [run]    B/N10000/tabicl_raw/s5
+  [run]    B/N10000/tabicl_raw/s6
+      [WARN] calibration: predicted/actual = 0.489
+  [run]    B/N10000/tabicl_raw/s7
+  [run]    B/N10000/tabicl_raw/s8
+      [WARN] calibration: predicted/actual = 0.419
+  [run]    B/N10000/tabicl_raw/s9
+      [WARN] calibration: predicted/actual = 0.351
+  [run]    B/N10000/tabicl_raw/s10
+      [WARN] calibration: predicted/actual = 0.439
+  [run]    B/N10000/tabicl_raw/s11
+      [WARN] calibration: predicted/actual = 0.347
+  [run]    B/N10000/tabicl_raw/s12
+      [WARN] calibration: predicted/actual = 0.404
+  [run]    B/N10000/tabicl_raw/s13
+      [WARN] calibration: predicted/actual = 0.468
+  [run]    B/N10000/tabicl_raw/s14
+      [WARN] calibration: predicted/actual = 0.342
+  [run]    B/N10000/tabicl_raw/s15
+  [run]    B/N10000/tabicl_raw/s16
+      [WARN] calibration: predicted/actual = 0.348
+  [run]    B/N10000/tabicl_raw/s17
+      [WARN] calibration: predicted/actual = 0.354
+  [run]    B/N10000/tabicl_raw/s18
+      [WARN] calibration: predicted/actual = 0.397
+  [run]    B/N10000/tabicl_raw/s19
+  [run]    B/N20000/tabicl_raw/s0
+      [WARN] calibration: predicted/actual = 0.386
+  [run]    B/N20000/tabicl_raw/s1
+      [WARN] calibration: predicted/actual = 0.416
+  [run]    B/N20000/tabicl_raw/s2
+      [WARN] calibration: predicted/actual = 0.440
+  [run]    B/N20000/tabicl_raw/s3
+      [WARN] calibration: predicted/actual = 0.402
+  [run]    B/N20000/tabicl_raw/s4
+      [WARN] calibration: predicted/actual = 0.423
+  [run]    B/N20000/tabicl_raw/s5
+      [WARN] calibration: predicted/actual = 0.461
+  [run]    B/N20000/tabicl_raw/s6
+      [WARN] calibration: predicted/actual = 0.426
+  [run]    B/N20000/tabicl_raw/s7
+      [WARN] calibration: predicted/actual = 0.356
+  [run]    B/N20000/tabicl_raw/s8
+  [run]    B/N20000/tabicl_raw/s9
+      [WARN] trivial_floor: rate Gini 0.4656 does not beat the 1/exposure floor (0.4676)
+  [run]    B/N20000/tabicl_raw/s10
+  [run]    B/N20000/tabicl_raw/s11
+  [run]    B/N20000/tabicl_raw/s12
+      [WARN] calibration: predicted/actual = 0.360
+  [run]    B/N20000/tabicl_raw/s13
+      [WARN] calibration: predicted/actual = 0.400
+  [run]    B/N20000/tabicl_raw/s14
+  [run]    B/N20000/tabicl_raw/s15
+      [WARN] calibration: predicted/actual = 0.425
+  [run]    B/N20000/tabicl_raw/s16
+      [WARN] calibration: predicted/actual = 0.358
+  [run]    B/N20000/tabicl_raw/s17
+  [run]    B/N20000/tabicl_raw/s18
+      [WARN] calibration: predicted/actual = 0.394
+  [run]    B/N20000/tabicl_raw/s19
+      [WARN] calibration: predicted/actual = 0.326
+
+=== gini_exposure_weighted vs N (mean over seeds) ===
+cfg_model  glm_hurdle  glm_tweedie  intercept  one_over_exposure  tabicl  tabicl_raw  xgb_hurdle  xgb_tweedie
+cfg_n                                                                                                        
+500            0.1734       0.0805    -0.0000                NaN  0.2644         NaN      0.4676       0.2492
+1000           0.1882       0.0849    -0.0000                NaN  0.3855         NaN      0.4676       0.3644
+2000           0.4293       0.3329    -0.0000                NaN  0.4610         NaN      0.4676       0.3996
+5000           0.4176       0.3040    -0.0000             0.4676  0.4897      0.4801      0.4679       0.3850
+10000          0.4559       0.3511    -0.0000             0.4676  0.5298      0.5271      0.5013       0.4329
+20000          0.4704       0.3509    -0.0000             0.4676  0.5513      0.5401      0.5253       0.4553
+50000          0.5172       0.4360    -0.0000                NaN  0.5686         NaN      0.5641       0.4800
+100000         0.5101       0.3941    -0.0000             0.4676  0.5690         NaN      0.5653       0.4859
+200000         0.5118       0.4182    -0.0000                NaN  0.5790         NaN      0.5808       0.5004
+542410         0.5240       0.4503    -0.0000             0.4676  0.5594         NaN      0.6035       0.5185
+
+=== tweedie_deviance_1.5 vs N (mean over seeds) ===
+cfg_model  glm_hurdle  glm_tweedie  intercept  one_over_exposure   tabicl  tabicl_raw  xgb_hurdle  xgb_tweedie
+cfg_n                                                                                                         
+500          165.9538     168.0600   104.9731                NaN 143.9372         NaN     99.6757     159.7386
+1000         120.0003     135.7845   102.9256                NaN 115.6275         NaN     99.9139     137.2642
+2000         101.6450     112.0346   112.9906                NaN  98.2958         NaN     97.5951     117.4182
+5000          98.1528     104.2422   104.9482            95.5249  98.6424     99.8007     97.2616     113.0453
+10000         95.7000     100.3489   105.0417            95.6081  95.5651     96.8727     95.8544     102.8119
+20000         94.5512      99.0429   103.9619            94.6069  93.2561     94.8113     94.0530     100.7567
+50000         91.7689      94.5429   102.2328                NaN  88.2525         NaN     88.7415      95.5692
+100000        92.8250      95.8658   103.3078            94.0025  88.0770         NaN     88.4334      91.1006
+200000        93.0389      96.1823   104.0114                NaN  86.8575         NaN     86.2678      88.7608
+542410        91.6479      92.0452   102.8017            93.5320  87.2776         NaN     82.6753      88.0900
+Track B: 5 configs over N grid [100000]
+
+  [run]    B/N100000/tabicl_raw/s0
+      [WARN] calibration: predicted/actual = 0.478
+  [run]    B/N100000/tabicl_raw/s1
+  [run]    B/N100000/tabicl_raw/s2
+      [WARN] calibration: predicted/actual = 0.493
+  [run]    B/N100000/tabicl_raw/s3
+  [run]    B/N100000/tabicl_raw/s4
+
+=== gini_exposure_weighted vs N (mean over seeds) ===
+cfg_model  glm_hurdle  glm_tweedie  intercept  one_over_exposure  tabicl  tabicl_raw  xgb_hurdle  xgb_tweedie
+cfg_n                                                                                                        
+500            0.1734       0.0805    -0.0000                NaN  0.2644         NaN      0.4676       0.2492
+1000           0.1882       0.0849    -0.0000                NaN  0.3855         NaN      0.4676       0.3644
+2000           0.4293       0.3329    -0.0000                NaN  0.4610         NaN      0.4676       0.3996
+5000           0.4176       0.3040    -0.0000             0.4676  0.4897      0.4801      0.4679       0.3850
+10000          0.4559       0.3511    -0.0000             0.4676  0.5298      0.5271      0.5013       0.4329
+20000          0.4704       0.3509    -0.0000             0.4676  0.5513      0.5401      0.5253       0.4553
+50000          0.5172       0.4360    -0.0000                NaN  0.5686         NaN      0.5641       0.4800
+100000         0.5101       0.3941    -0.0000             0.4676  0.5690      0.5954      0.5653       0.4859
+200000         0.5118       0.4182    -0.0000                NaN  0.5790         NaN      0.5808       0.5004
+542410         0.5240       0.4503    -0.0000             0.4676  0.5594         NaN      0.6035       0.5185
+
+=== tweedie_deviance_1.5 vs N (mean over seeds) ===
+cfg_model  glm_hurdle  glm_tweedie  intercept  one_over_exposure   tabicl  tabicl_raw  xgb_hurdle  xgb_tweedie
+cfg_n                                                                                                         
+500          165.9538     168.0600   104.9731                NaN 143.9372         NaN     99.6757     159.7386
+1000         120.0003     135.7845   102.9256                NaN 115.6275         NaN     99.9139     137.2642
+2000         101.6450     112.0346   112.9906                NaN  98.2958         NaN     97.5951     117.4182
+5000          98.1528     104.2422   104.9482            95.5249  98.6424     99.8007     97.2616     113.0453
+10000         95.7000     100.3489   105.0417            95.6081  95.5651     96.8727     95.8544     102.8119
+20000         94.5512      99.0429   103.9619            94.6069  93.2561     94.8113     94.0530     100.7567
+50000         91.7689      94.5429   102.2328                NaN  88.2525         NaN     88.7415      95.5692
+100000        92.8250      95.8658   103.3078            94.0025  88.0770     86.3600     88.4334      91.1006
+200000        93.0389      96.1823   104.0114                NaN  86.8575         NaN     86.2678      88.7608
+542410        91.6479      92.0452   102.8017            93.5320  87.2776         NaN     82.6753      88.0900
+Track B: 3 configs over N grid [542410]
+
+  [run]    B/N542410/tabicl_raw/s0

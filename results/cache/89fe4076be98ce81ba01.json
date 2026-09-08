@@ -1,0 +1,68 @@
+{
+  "status": "ok",
+  "config": {
+    "track": "B",
+    "n": 5000,
+    "model": "tabicl_raw",
+    "seed": 7,
+    "context": 20000,
+    "trials": 30,
+    "test_rows": 135603,
+    "label": "B/N5000/tabicl_raw/s7"
+  },
+  "metrics": {
+    "gini_fixed_exposure": 0.3512611938954845,
+    "normalized_gini_fixed_exposure": 0.361773672862273,
+    "n_fixed_exposure": 36444.0,
+    "tweedie_deviance_1.5": 93.72430491477397,
+    "tweedie_deviance_1.9": 35.19787954189477,
+    "gini": 0.6375214977556223,
+    "normalized_gini": 0.64016005449905,
+    "gini_exposure_weighted": 0.5654548676762747,
+    "normalized_gini_exposure_weighted": 0.5717402069935089,
+    "gini_total_loss": 0.4508475496871788,
+    "normalized_gini_total_loss": 0.4555332289106852,
+    "calibration_ratio": 0.4104294804059371,
+    "mean_predicted_loss_cost": 88.6377981495361,
+    "mean_actual_loss_cost": 215.96352694223742
+  },
+  "info": {
+    "n_train": 5000,
+    "n_claims_stage2": 187,
+    "claim_rate": 0.0374,
+    "stage1_context_size": 5000,
+    "stage2_context_size": 187,
+    "n_contexts": 1,
+    "sampling_odds_ratio": 1.0,
+    "severity_cap": 18223.330099999213,
+    "peak_vram_mib": 3006.13671875,
+    "fit_seconds": 0.7099748000036925,
+    "predict_seconds": 60.02643369999714,
+    "severity_clipped_frac": 0.0,
+    "n_features": 9,
+    "stage1_log_loss": 0.1506667187385592,
+    "stage1_brier": 0.03491418146002754,
+    "stage1_mean_pred": 0.02889979177461247,
+    "stage1_base_rate": 0.037145195902745516,
+    "stage1_auc": 0.6938560082529579,
+    "exposure_monotonic_frac": 1.0,
+    "exposure_spearman": 1.0,
+    "exposure_p_first_decile": 0.0059011179671921935,
+    "exposure_p_last_decile": 0.04283804571249354,
+    "mean_exposure": 0.5289863889512688,
+    "total_loss": 385809.79,
+    "max_loss": 125847.05
+  },
+  "flags": [
+    {
+      "check": "degeneracy",
+      "severity": "INFO",
+      "message": "premium CV=1.4368"
+    },
+    {
+      "check": "calibration",
+      "severity": "WARN",
+      "message": "predicted/actual = 0.410"
+    }
+  ]
+}
